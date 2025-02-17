@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
+        // Función de WhatsApp
+    window.redirectToWhatsApp = function() {
+        const phoneNumber = '946978919'; // Número de teléfono
+        const message = 'Hola, nos interesa tus servicios. ¿Podrías ayudarnos?';
+        const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank'); // Cambiar window.location por window.open
+    };
+    
     // Inicializar AOS
     AOS.init({
         duration: 1000,
@@ -34,13 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 
-    // Función de WhatsApp
-    window.redirectToWhatsApp = function() {
-        const phoneNumber = '946978919';
-        const message = 'Hola, nos interesa tus servicios. ¿Podrías ayudarnos?';
-        const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
-        window.location = url;
-    };
 
     // Configuración de la previsualización de imágenes
     const imagePreview = document.createElement('div');
