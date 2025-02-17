@@ -112,6 +112,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+        // Función para scroll suave
+    window.scrollToSection = function(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
+
     // Smooth Scroll mejorado
     document.querySelectorAll('a[href^="#"], button[onclick*="href"]').forEach(element => {
         element.addEventListener('click', function(e) {
