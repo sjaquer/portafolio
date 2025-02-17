@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #d4a5a5, #8a8cc9);
+  background: linear-gradient(135deg, #a5a6d4, #09607C);
   color: #fff;
   display: flex;
   justify-content: center;
@@ -31,14 +31,15 @@ body {
   height: 200%;
   background: conic-gradient(
     from 0deg,
-    #636363,
-    #a142ff,
-    #d6c4f2,
-    #DBC4F2,
-    #BF5A5A,
-    #00a2ff,
-    #fa4c3d,
-    #ffffff
+    #000000,
+    #09607C,
+    #09607C,
+    #09607C,
+    #45007e,
+    #09607C,
+    #2196f3,
+    #09607C,
+    #053c4e
   );
   transform: translate(-50%, -50%);
   animation: rotate 8s linear infinite;
@@ -122,7 +123,7 @@ body {
 }
 
 .nav button {
-  background: #6c63ff;
+  background: #09607C;
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
@@ -133,7 +134,7 @@ body {
 }
 
 .nav button:hover {
-  background: #5753c9;
+  background: #09607C;
 }
 
 /* Perfil */
@@ -171,7 +172,7 @@ body {
 }
 
 .profile .info .buttons button {
-  background: #6c63ff;
+  background: #09607C;
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
@@ -182,7 +183,7 @@ body {
 }
 
 .profile .info .buttons button:hover {
-  background: #5753c9;
+  background: #09607C;
 }
 
 /* Secciones horizontales */
@@ -248,7 +249,7 @@ body {
 }
 
 .grid .card .buttons button {
-  background: #6c63ff;
+  background: #09607C;
   border: none;
   padding: 5px 10px;
   border-radius: 50px;
@@ -259,7 +260,7 @@ body {
 }
 
 .grid .card .buttons button:hover {
-  background: #5753c9;
+  background: #09607C;
 }
 
 /* Ajustes responsivos */
@@ -373,7 +374,7 @@ body {
   width: 200px;
   margin: 30px auto 0;
   padding: 12px 24px;
-  background: #6c63ff;
+  background: #09607C;
   color: #fff;
   border: none;
   border-radius: 20px;
@@ -383,7 +384,7 @@ body {
 }
 
 .contact-form button:hover {
-  background: #5753c9;
+  background: #09607C;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
