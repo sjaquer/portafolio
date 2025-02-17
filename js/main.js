@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función de WhatsApp
     window.redirectToWhatsApp = function() {
-        const phoneNumber = '+51 946978919';
+        const phoneNumber = '946978919';
         const message = 'Hola, nos interesa tus servicios. ¿Podrías ayudarnos?';
         const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
         window.location = url;
