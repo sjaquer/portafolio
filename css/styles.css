@@ -276,8 +276,8 @@ body {
   }
 
   .grid .card img {
-      width: 68px; /* Tamaño más pequeño para móviles */
-      height: 68px;
+      width: 90px; /* Tamaño más pequeño para móviles */
+      height: 90px;
   }
 
   .grid .card h3 {
