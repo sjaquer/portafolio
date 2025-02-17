@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Meta tags básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio y CV de Sebastian Jaque R., un profesional multifacético con experiencia en programación, soporte técnico, diseño 3D, producción audiovisual y conocimientos en negocios internacionales.">
+    
+    <title>Portafolio - Sebastian Jaque</title>
+
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="images/icontitle.png" as="image">
+    <link rel="preload" href="images/iconperso.jpg" as="image">
+    
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Contenedor del fondo animado -->
+    <div class="background-container"></div>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Encabezado con logo y redes sociales -->
+        <header class="header">
+            <img src="images/icontitle.png" alt="Profile Picture" width="50" height="50">
+            <div class="title">Portafolio - Sebastian Jaque</div>
+            <div class="icons">
+                <a href="https://www.instagram.com/sjaquer_" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sjaquer" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/sjaquer" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.youtube.com/@sjaquer" target="_blank" rel="noopener">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Navegación principal -->
+        <nav class="nav">
+            <button data-href="#photos">Mis Fotografías</button>
+            <button data-href="#contact">Contactame</button>
+        </nav>
+
+        <!-- Sección de perfil principal -->
+        <div class="profile">
+            <img src="images/iconperso.jpg" alt="Profile Picture" width="150" height="150">
+            <div class="info">
+                <h1>Sebastian Jaque</h1>
+                <p>Programador - Diseñador - Fotógrafo - Técnico</p>
+                <div class="buttons">
+                    <button onclick="window.location.href='pdf/cv_sebastian_jaque.pdf';" download="cv_sebastian_jaque.pdf">Descargar CV</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido principal -->
+            <main>
+                <div class="horizontal-sections">
+                    <section id="profile" class="section card" data-aos="fade-up">
+                        <h2 class="typewriter">Resumen de Perfil</h2>
+                        <p>Soy un apasionado por la tecnología y la innovación, con experiencia en programación, diseño 3D y automatización de procesos. Mi enfoque está en crear soluciones digitales que impulsen la eficiencia empresarial y mejoren la experiencia del usuario. Como estudiante de Administración y Negocios Internacionales, busco oportunidades para aplicar mis habilidades técnicas y mi visión global en proyectos desafiantes.</p>
+                    </section>
+                    <section id="experience" class="section card" data-aos="fade-up">
+                        <h2 class="typewriter">Experiencia Laboral</h2>
+                        <ul>
+                            <li><strong>Autónomo</strong> - Técnico Informático (2022 - Actualmente)</li>
+                            <li><strong>Autónomo</strong> - Diseñador 3D (2018 - Actualmente)</li>
+                            <li><strong>Autónomo</strong> - Programador Junior (2023 - Actualmente)</li>
+                            <li><strong>Gomaju</strong> - Atención al Cliente (2023 - 2023)</li>
+                            <li><strong>KFC</strong> - Equipo de Cocina (2022 - 2022)</li>
+                            <li><strong>Romaseda</strong> - Asistente Administrativo (2018 - 2020)</li>
+                        </ul>
+                    </section>
+                </div>
+                <section id="skills" class="section" data-aos="fade-up">
+                    <h2 class="typewriter">Conocimientos de Herramientas</h2>
+                    <div class="grid">
+                        <div class="card">
+                            <img src="images/iconweb1.png" alt="Photoshop">
+                            <h3>Photoshop</h3>
+                            <p>Ediciones de imagen, creacion de flayers publicitarios</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/iconweb2.png" alt="Unreal Engine">
+                            <h3>Unreal Engine</h3>
+                            <p>Creacion de entornos 3D, diseño de iluminación y entornos interactuables.</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/iconweb3.png" alt="3D Maya">
+                            <h3>3D Maya</h3>
+                            <p>Creacion de objetos 3D simples en estilo Low Poly.</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/iconweb4.png" alt="Excel">
+                            <h3>Excel</h3>
+                            <p>Conocimientos avanzados, programacion VBA, tablas dinamicas, etc.</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/iconweb5.png" alt="HTML5">
+                            <h3>HTML5</h3>
+                            <p>Conocimientos en programacion web basica.</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/iconweb6.png" alt="Python">
+                            <h3>Python</h3>
+                            <p>Conocimientos en programacion orientada a optimizacion de tareas.</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/iconweb7.png" alt="CSS">
+                            <h3>CSS</h3>
+                            <p>Conocimientos en la creacion de diseño web a codigo.</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/iconweb8.png" alt="JavaScript">
+                            <h3>JavaScript</h3>
+                            <p>Conocimientos en creacion de scripts para paginas web.</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/iconweb9.png" alt="SQL Server">
+                            <h3>SQL Server</h3>
+                            <p>Capacidad de crear y administrar base de datos.</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/iconweb10.png" alt="Light Room">
+                            <h3>Light Room</h3>
+                            <p>Retoques y mejoras de imagenes fotograficas.</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/iconweb11.png" alt="DaVinci Resolve">
+                            <h3>DaVinci Resolve</h3>
+                            <p>Edicion de videos, corte y renderizado del mismo.</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/iconweb12.png" alt="IA">
+                            <h3>IA</h3>
+                            <p>Conocimientos en uso de Herramientas de IA orientadas al trabajo.</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="photos" class="section" data-aos="fade-up">
+                    <h2 class="typewriter">Fotografías</h2>
+                    <div class="grid">
+                        <div class="card">
+                            <img src="images/cam_1.jpg" alt="Trabajo 1">
+                            <h3>Trabajo 1</h3>
+                            <p>Descripción del trabajo</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/cam_2.jpg" alt="Trabajo 2">
+                            <h3>Trabajo 2</h3>
+                            <p>Descripción del trabajo</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/cam_3.jpg" alt="Trabajo 3">
+                            <h3>Trabajo 3</h3>
+                            <p>Descripción del trabajo</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/cam_4.jpg" alt="Trabajo 4">
+                            <h3>Trabajo 4</h3>
+                            <p>Descripción del trabajo</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="projects" class="section" data-aos="fade-up">
+                    <h2 class="typewriter">Proyectos</h2>
+                    <div class="grid">
+                        <div class="card">
+                            <img src="images/renders_1.png" alt="Proyecto 1">
+                            <h3>Proyecto 1</h3>
+                            <p>Descripción del Proyecto 1</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/renders_2.png" alt="Proyecto 2">
+                            <h3>Proyecto 2</h3>
+                            <p>Descripción del Proyecto 2</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/renders_3.png" alt="Proyecto 3">
+                            <h3>Proyecto 3</h3>
+                            <p>Descripción del Proyecto 3</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/renders_4.png" alt="Proyecto 4">
+                            <h3>Proyecto 4</h3>
+                            <p>Descripción del Proyecto 4</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/renders_5.png" alt="Proyecto 5">
+                            <h3>Proyecto 5</h3>
+                            <p>Descripción del Proyecto 5</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/renders_6.png" alt="Proyecto 6">
+                            <h3>Proyecto 6</h3>
+                            <p>Descripción del Proyecto 6</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="activities" class="activities-container" data-aos="fade-up">
+                    <h2 class="section-header">Actividades Actuales</h2>
+                    <div class="content-wrapper">
+                        <ul>
+                            <li>Participación en el seminario de investigación de la Universidad Norbert Wiener</li>
+                            <li>Creando aplicación para gestión de vuelos internos</li>
+                            <li>Estudiando Bases de Datos relacionales con SQL</li>
+                        </ul>
+                    </div>
+                </section>
+               <section id="contact" class="contact-container" data-aos="fade-up">
+        <h2 class="section-header">Contacto</h2>
+        <div class="content-wrapper">
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="form-message" class="form-message"></div>
+        </div>
+    </section>
+        </main>
+
+        <!-- Botón de WhatsApp flotante -->
+        <button class="whatsapp-button" aria-label="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>
