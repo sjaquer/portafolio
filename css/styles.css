@@ -123,18 +123,22 @@ body {
 }
 
 .nav button {
-  background: #09607C;
+  background: linear-gradient(135deg, #09607C, #ffffff);
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
   font-size: 1rem;
   color: #fff;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  min-width: 200px;
 }
 
 .nav button:hover {
-  background: #09607C;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Perfil */
@@ -168,22 +172,28 @@ body {
 
 .profile .info .buttons {
   display: flex;
-  gap: 10px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .profile .info .buttons button {
-  background: #09607C;
+  background: linear-gradient(135deg, #09607C, #ffffff);
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
   font-size: 1rem;
   color: #fff;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  min-width: 200px;
 }
 
 .profile .info .buttons button:hover {
-  background: #09607C;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Secciones horizontales */
@@ -201,7 +211,7 @@ body {
 /* Grid de tarjetas */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 
@@ -225,13 +235,13 @@ body {
 }
 
 .grid .card img {
-  width: 144px; /* Tamaño fijo para iconos */
-  height: 144x; /* Tamaño fijo para iconos */
-  object-fit: contain; /* Mantiene la proporción sin recortar */
-  border-radius: 50%; /* Recorte circular */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
   margin: 10px 0;
-  border-radius: 8px;
 }
+
 .grid .card h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
@@ -263,46 +273,59 @@ body {
   background: #09607C;
 }
 
+/* Sección de conocimientos de herramientas */
+#skills .grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#skills .grid .card {
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 144px;
+  max-width: 144px;
+}
+
 /* Ajustes responsivos */
 @media (max-width: 768px) {
   .grid {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
   }
 
   .grid .card {
-      min-height: 180px;
-      padding: 15px;
+    min-height: 180px;
+    padding: 15px;
   }
 
   .grid .card img {
-      width: 90px; /* Tamaño más pequeño para móviles */
-      height: 90px;
+    width: 100%;
+    height: auto;
   }
 
   .grid .card h3 {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .grid .card p {
-      font-size: 0.8rem;
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .grid {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
   }
 
   .grid .card {
-      min-height: 160px;
-      padding: 10px;
+    min-height: 160px;
+    padding: 10px;
   }
 
   .grid .card img {
-      width: 40px; /* Aún más pequeño para móviles pequeños */
-      height: 40px;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -523,8 +546,8 @@ body {
 
 @media (max-width: 768px) {
   .close-btn {
-      top: 10px;
-      right: 10px;
+    top: 10px;
+    right: 10px;
   }
 }
 
