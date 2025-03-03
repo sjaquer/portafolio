@@ -83,6 +83,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   border: 2px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden; /* Previene desbordamiento */
 }
 
 /* Header */
@@ -123,7 +124,7 @@ body {
 }
 
 .nav button {
-  background: linear-gradient(135deg, #09607C, #653494);
+  background: linear-gradient(135deg, #09607C, #3787ff);
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
@@ -178,7 +179,7 @@ body {
 }
 
 .profile .info .buttons button {
-  background: linear-gradient(135deg, #09607C, #653494);
+  background: linear-gradient(135deg, #09607C, #3787ff);
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
@@ -299,59 +300,49 @@ body {
   object-fit: contain;
   margin-bottom: 15px;
 }
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-  }
 
-  .grid .card {
-    min-height: 180px;
-    padding: 15px;
-  }
-
-  .grid .card img {
-    width: 100%;
-    height: auto;
-  }
-
-  .grid .card h3 {
-    font-size: 1rem;
-  }
-
-  .grid .card p {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
-  }
-
-  .grid .card {
-    min-height: 160px;
-    padding: 10px;
-  }
-
-  .grid .card img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-/* Contacto: Sección de datos personales */
-.contact-container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 30px;
+/* Sección de actividades actuales */
+.activities-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 20px;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   border: 2px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box; /* Incluye padding y border en el ancho */
+}
+
+.activities-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.activities-container li {
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.activities-container li:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Sección de contacto */
+.contact-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box; /* Incluye padding y border en el ancho */
 }
 
 .section-header {
@@ -484,36 +475,6 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Contenedor para actividades actuales */
-.activities-container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-.activities-container ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.activities-container li {
-  background: rgba(255, 255, 255, 0.1);
-  margin-bottom: 15px;
-  padding: 15px;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.activities-container li:hover {
-  transform: translateX(10px);
-  background: rgba(255, 255, 255, 0.2);
-}
-
 /* Preview de imágenes */
 .image-preview {
   display: none;
@@ -593,6 +554,17 @@ body {
     margin-right: 0;
     margin-bottom: 20px;
   }
+
+  .activities-container,
+  .contact-container {
+    margin: 10px auto;
+    padding: 15px;
+    width: 100%;
+  }
+
+  .contact-form {
+    padding: 0 10px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -619,5 +591,16 @@ body {
     height: 50px;
     bottom: 1rem;
     left: 1rem;
+  }
+
+  .activities-container,
+  .contact-container {
+    margin: 5px auto;
+    padding: 10px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 8px;
   }
 }
