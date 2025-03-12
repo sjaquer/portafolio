@@ -678,27 +678,16 @@ body {
   display: flex;
   gap: 20px;
   padding: 40px 60px;
-  transition: all 0.8s ease-out; /* Aumentada la duración y cambiado el timing */
-  cursor: grab;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  scroll-snap-type: x mandatory;
-  scroll-snap-stop: always; /* Asegura paradas más suaves */
+  overflow-x: hidden;
+  width: max-content;
+  animation: slide 30s linear infinite;
 }
 
-.photo-grid::-webkit-scrollbar {
-  display: none;
-}
 .photo-card {
   flex: 0 0 300px;
   position: relative;
   transform-style: preserve-3d;
-  transition: all 0.8s ease-out; /* Aumentada la duración de la transición */
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .photo-card img {
@@ -707,32 +696,33 @@ body {
   object-fit: cover;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: all 0.8s ease-out; /* Añadida transición suave a las imágenes */
+  pointer-events: none;
+  -webkit-user-drag: none;
 }
 
 .scroll-area {
   position: absolute;
   top: 0;
   height: 100%;
-  width: 120px; /* Aumentado el área sensible */
+  width: 150px; /* Aumentado el área sensible */
   z-index: 2;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.scroll-area:hover {
-  opacity: 1;
+/* Animación del slider */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-300px * (var(--total-cards) / 2))); /* Se ajusta automáticamente según el número de tarjetas */
+  }
 }
 
-.scroll-area.left {
-  left: 0;
-  background: linear-gradient(to right, rgba(0,0,0,0.3), transparent);
+/* Eliminar los scroll-area ya que no se necesitan */
+.scroll-area {
+  display: none;
 }
-
-.scroll-area.right {
-  right: 0;
-  background: linear-gradient(to left, rgba(0,0,0,0.3), transparent);
-}
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
