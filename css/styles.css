@@ -127,7 +127,7 @@ body {
 }
 
 .nav button {
-  background: linear-gradient(135deg, #09607C, #ffffff);
+  background: linear-gradient(135deg, #09607C, #4446e9);
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
@@ -183,7 +183,7 @@ body {
 }
 
 .profile .info .buttons button {
-  background: linear-gradient(135deg, #09607C, #ffffff);
+  background: linear-gradient(135deg, #09607C, #4446e9);
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
