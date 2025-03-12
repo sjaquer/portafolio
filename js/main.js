@@ -138,93 +138,124 @@ function initSlider() {
     if (!photoGrid) return;
 
     const cards = photoGrid.querySelectorAll('.photo-card');
-    const cardWidth = cards[0].offsetWidth + 20; // Ancho + gap
-    let currentPosition = 0;
-    let baseSpeed = 1; // Velocidad base
-    let currentSpeed = baseSpeed;
-    let isHovered = false;
+    let autoScrollInterval;
+    const scrollSpeed = 3; // Velocidad del scroll automático
 
-    function moveSlider() {
-        currentPosition -= currentSpeed;
-        
-        if (Math.abs(currentPosition) >= cardWidth) {
-            const firstCard = photoGrid.firstElementChild;
-            photoGrid.appendChild(firstCard);
-            currentPosition = 0;
-            photoGrid.style.transform = `translateX(0)`;
-        } else {
-            photoGrid.style.transform = `translateX(${currentPosition}px)`;
+    // Función para el scroll con inercia
+    function momentumScroll() {
+        if (!isScrolling) {
+            const velocity = (photoGrid.scrollLeft - scrollLeft) * 0.8;
+            if (Math.abs(velocity) < 0.5) return;
+            
+            photoGrid.scrollLeft += velocity;
+            scrollLeft = photoGrid.scrollLeft;
+            momentumID = requestAnimationFrame(momentumScroll);
         }
     }
 
-    let animationFrameId;
-    function animate() {
-        moveSlider();
-        animationFrameId = requestAnimationFrame(animate);
-    }
-
-    // Eventos de mouse para cambiar velocidad con transición suave
-    let speedTransitionInterval;
-    
-    photoGrid.addEventListener('mouseenter', () => {
-        isHovered = true;
-        clearInterval(speedTransitionInterval);
+     // Eventos del mouse
+     photoGrid.addEventListener('mousedown', (e) => {
+        isScrolling = true;
+        startX = e.pageX - photoGrid.offsetLeft;
+        scrollLeft = photoGrid.scrollLeft;
+        cancelAnimationFrame(momentumID);
         
-        const MAX_SPEED = baseSpeed * 3;
-        const SPEED_INCREMENT = 0.1;
-        const INTERVAL_TIME = 10;
-    
-        speedTransitionInterval = setInterval(() => {
-            if (currentSpeed < MAX_SPEED) {
-                currentSpeed += SPEED_INCREMENT;
-            } else {
-                clearInterval(speedTransitionInterval);
-            }
-        }, INTERVAL_TIME);
+        photoGrid.style.cursor = 'grabbing';
+        photoGrid.style.userSelect = 'none';
+    });
+
+    photoGrid.addEventListener('mousemove', (e) => {
+        if (!isScrolling) return;
+        
+        e.preventDefault();
+        const x = e.pageX - photoGrid.offsetLeft;
+        const walk = (x - startX) * 2;
+        photoGrid.scrollLeft = scrollLeft - walk;
+    });
+
+    photoGrid.addEventListener('mouseup', () => {
+        isScrolling = false;
+        photoGrid.style.cursor = 'grab';
+        photoGrid.style.removeProperty('user-select');
+        momentumScroll();
     });
 
     photoGrid.addEventListener('mouseleave', () => {
-        isHovered = false;
-        clearInterval(speedTransitionInterval);
-        
-        speedTransitionInterval = setInterval(() => {
-            if (currentSpeed > baseSpeed) {
-                currentSpeed -= 0.1;
-            } else {
-                clearInterval(speedTransitionInterval);
-            }
-        }, 50);
+        if (isScrolling) {
+            isScrolling = false;
+            photoGrid.style.cursor = 'grab';
+            photoGrid.style.removeProperty('user-select');
+            momentumScroll();
+        }
     });
 
-     // Eventos táctiles
-     let isDragging = false;
-     let startX = 0;
-     let startPosition = 0;
- 
-     photoGrid.addEventListener('touchstart', (e) => {
-         isDragging = true;
-         startX = e.touches[0].pageX;
-         startPosition = currentPosition;
-         cancelAnimationFrame(animationFrameId);
-     }, { passive: true });
- 
-     photoGrid.addEventListener('touchmove', (e) => {
-         if (!isDragging) return;
-         e.preventDefault();
-         const x = e.touches[0].pageX;
-         const walk = (startX - x);
-         currentPosition = startPosition - walk;
-         photoGrid.style.transform = `translateX(${currentPosition}px)`;
-     }, { passive: false });
- 
-     photoGrid.addEventListener('touchend', () => {
-         isDragging = false;
-         // Restaurar velocidad según si está hover o no
-         currentSpeed = isHovered ? baseSpeed * 3 : baseSpeed;
-         animate();
-     });
+    // Scroll con la rueda del mouse
+    photoGrid.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        const delta = e.deltaY || e.deltaX;
+        photoGrid.scrollLeft += delta;
+        cancelAnimationFrame(momentumID);
+    }, { passive: false });
 
-     
+
+    // Función para el scroll automático
+    function startAutoScroll() {
+        autoScrollInterval = setInterval(() => {
+            photoGrid.scrollLeft += scrollSpeed;
+            
+            // Si llegamos al final, volver al inicio
+            if (photoGrid.scrollLeft >= (photoGrid.scrollWidth - photoGrid.clientWidth)) {
+                photoGrid.scrollLeft = 0;
+            }
+            
+            requestAnimationFrame(updateCardsEffect);
+        }, 16); // 60fps para movimiento suave
+    }
+
+    function stopAutoScroll() {
+        if (autoScrollInterval) {
+            clearInterval(autoScrollInterval);
+        }
+    }
+
+    // Iniciar scroll automático
+    startAutoScroll();
+
+     // Pausar en hover o interacción
+     photoGrid.addEventListener('mouseenter', stopAutoScroll);
+     photoGrid.addEventListener('mouseleave', startAutoScroll);
+ 
+
+ // Habilitar scroll manual con la rueda del mouse
+    photoGrid.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        stopAutoScroll();
+        photoGrid.scrollLeft += e.deltaY;
+        requestAnimationFrame(updateCardsEffect);
+    });
+
+    // Eventos táctiles
+   photoGrid.addEventListener('touchstart', (e) => {
+        isScrolling = true;
+        startX = e.touches[0].pageX - photoGrid.offsetLeft;
+        scrollLeft = photoGrid.scrollLeft;
+        cancelAnimationFrame(momentumID);
+    }, { passive: true });
+
+    photoGrid.addEventListener('touchmove', (e) => {
+        if (!isScrolling) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX - photoGrid.offsetLeft;
+        const walk = (x - startX) * 2;
+        photoGrid.scrollLeft = scrollLeft - walk;
+    }, { passive: false });
+
+    photoGrid.addEventListener('touchend', () => {
+        isScrolling = false;
+        momentumScroll();
+    });
+
+
     // Efecto 3D optimizado
     function updateCardsEffect() {
         const centerX = window.innerWidth / 2;
@@ -245,7 +276,21 @@ function initSlider() {
         });
     }
 
-    // Observador optimizado
+    // Scroll infinito
+    photoGrid.addEventListener('scroll', () => {
+        requestAnimationFrame(updateCardsEffect);
+        
+        const scrollLeft = photoGrid.scrollLeft;
+        const maxScroll = photoGrid.scrollWidth - photoGrid.clientWidth;
+
+        if (scrollLeft <= 0) {
+            photoGrid.scrollLeft = maxScroll - 1;
+        } else if (scrollLeft >= maxScroll) {
+            photoGrid.scrollLeft = 1;
+        }
+    });
+
+    // Observador para el efecto 3D
     const scrollObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -259,12 +304,11 @@ function initSlider() {
 
     cards.forEach(card => scrollObserver.observe(card));
 
-    // Iniciar animación
-    animate();
+    // Actualización inicial
+    updateCardsEffect();
 
     // Limpiar al desmontar
     return () => {
-        cancelAnimationFrame(animationFrameId);
         scrollObserver.disconnect();
     };
 }
@@ -336,26 +380,3 @@ window.scrollToSection = function(sectionId) {
         });
     }
 };
-
-const photoGrid = document.querySelector('.photo-grid');
-if (photoGrid) {
-    const cards = photoGrid.querySelectorAll('.photo-card');
-    const totalCards = cards.length;
-
-    // En lugar de clonar, controlamos el scroll para simular infinito
-    photoGrid.addEventListener('scroll', () => {
-        const scrollLeft = photoGrid.scrollLeft;
-        const maxScroll = photoGrid.scrollWidth - photoGrid.clientWidth;
-
-        if (scrollLeft <= 0) {
-            // Si llegamos al inicio, saltamos cerca del final
-            photoGrid.scrollLeft = maxScroll - 10;
-        } else if (scrollLeft >= maxScroll) {
-            // Si llegamos al final, saltamos cerca del inicio
-            photoGrid.scrollLeft = 10;
-        }
-    });
-
-    // Establecer la variable CSS para el total de tarjetas original
-    photoGrid.style.setProperty('--total-cards', totalCards);
-}

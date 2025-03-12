@@ -672,15 +672,24 @@ body {
   width: 100%;
   overflow: hidden;
   padding: 20px 0;
+  perspective: 1000px;
 }
 
 .photo-grid {
   display: flex;
   gap: 20px;
   padding: 40px 60px;
-  overflow-x: hidden;
-  width: max-content;
-  animation: slide 30s linear infinite;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  scroll-snap-type: x proximity;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.photo-grid::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
 }
 
 .photo-card {
@@ -688,6 +697,7 @@ body {
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: grab;
 }
 
 .photo-card img {
@@ -698,6 +708,8 @@ body {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   pointer-events: none;
   -webkit-user-drag: none;
+  transform-origin: center center;
+  will-change: transform;
 }
 
 .scroll-area {
@@ -731,5 +743,27 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Animación suave para el hover */
+.photo-card:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+/* Efecto de transición suave entre cards */
+.photo-card:not(:hover) {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+/* Animación del scroll */
+@keyframes smoothScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-300px * var(--total-cards)));
   }
 }
