@@ -189,51 +189,6 @@ function initSlider() {
         }
     });
 
-    // Scroll con la rueda del mouse
-    photoGrid.addEventListener('wheel', (e) => {
-        e.preventDefault();
-        const delta = e.deltaY || e.deltaX;
-        photoGrid.scrollLeft += delta;
-        cancelAnimationFrame(momentumID);
-    }, { passive: false });
-
-
-    // Función para el scroll automático
-    function startAutoScroll() {
-        autoScrollInterval = setInterval(() => {
-            photoGrid.scrollLeft += scrollSpeed;
-            
-            // Si llegamos al final, volver al inicio
-            if (photoGrid.scrollLeft >= (photoGrid.scrollWidth - photoGrid.clientWidth)) {
-                photoGrid.scrollLeft = 0;
-            }
-            
-            requestAnimationFrame(updateCardsEffect);
-        }, 16); // 60fps para movimiento suave
-    }
-
-    function stopAutoScroll() {
-        if (autoScrollInterval) {
-            clearInterval(autoScrollInterval);
-        }
-    }
-
-    // Iniciar scroll automático
-    startAutoScroll();
-
-     // Pausar en hover o interacción
-     photoGrid.addEventListener('mouseenter', stopAutoScroll);
-     photoGrid.addEventListener('mouseleave', startAutoScroll);
- 
-
- // Habilitar scroll manual con la rueda del mouse
-    photoGrid.addEventListener('wheel', (e) => {
-        e.preventDefault();
-        stopAutoScroll();
-        photoGrid.scrollLeft += e.deltaY;
-        requestAnimationFrame(updateCardsEffect);
-    });
-
     // Eventos táctiles
    photoGrid.addEventListener('touchstart', (e) => {
         isScrolling = true;
