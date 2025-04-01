@@ -231,20 +231,6 @@ function initSlider() {
         });
     }
 
-    // Scroll infinito
-    photoGrid.addEventListener('scroll', () => {
-        requestAnimationFrame(updateCardsEffect);
-        
-        const scrollLeft = photoGrid.scrollLeft;
-        const maxScroll = photoGrid.scrollWidth - photoGrid.clientWidth;
-
-        if (scrollLeft <= 0) {
-            photoGrid.scrollLeft = maxScroll - 1;
-        } else if (scrollLeft >= maxScroll) {
-            photoGrid.scrollLeft = 1;
-        }
-    });
-
     // Observador para el efecto 3D
     const scrollObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
