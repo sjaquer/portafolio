@@ -25,23 +25,23 @@ const Contact: React.FC = () => {
     const newErrors: Partial<ContactForm> = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
+      newErrors.name = 'El nombre es obligatorio';
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = 'El correo es obligatorio';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
+      newErrors.email = 'Por favor ingresa un correo electrónico válido';
     }
 
     if (!formData.subject.trim()) {
-      newErrors.subject = 'Subject is required';
+      newErrors.subject = 'El asunto es obligatorio';
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
+      newErrors.message = 'El mensaje es obligatorio';
     } else if (formData.message.length < 10) {
-      newErrors.message = 'Message must be at least 10 characters long';
+      newErrors.message = 'El mensaje debe tener al menos 10 caracteres';
     }
 
     setErrors(newErrors);
@@ -89,19 +89,19 @@ const Contact: React.FC = () => {
   const contactInfo = [
     {
       icon: Mail,
-      label: 'Email',
+      label: 'Correo',
       value: 'john@example.com',
       href: 'mailto:john@example.com'
     },
     {
       icon: Phone,
-      label: 'Phone',
+      label: 'Teléfono',
       value: '+1 (555) 123-4567',
       href: 'tel:+15551234567'
     },
     {
       icon: MapPin,
-      label: 'Location',
+      label: 'Ubicación',
       value: 'San Francisco, CA',
       href: 'https://maps.google.com?q=San+Francisco,CA'
     }
@@ -119,11 +119,11 @@ const Contact: React.FC = () => {
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              Let's Work Together
+              Trabajemos Juntos
             </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Ready to bring your ideas to life? Get in touch and let's create something amazing together.
+            ¿Listo para dar vida a tus ideas? Ponte en contacto y creemos algo increíble juntos.
           </p>
         </motion.div>
 
@@ -136,10 +136,10 @@ const Contact: React.FC = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Ponte en Contacto</h3>
               <p className="text-gray-400 mb-8">
-                I'm always open to discussing new opportunities, creative projects, or potential collaborations. 
-                Whether you have a specific project in mind or just want to explore possibilities, I'd love to hear from you.
+                Siempre estoy abierto a discutir nuevas oportunidades, proyectos creativos o posibles colaboraciones.
+                Ya sea que tengas un proyecto específico en mente o simplemente quieras explorar posibilidades, me encantaría saber de ti.
               </p>
             </div>
 
@@ -178,10 +178,10 @@ const Contact: React.FC = () => {
             >
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-green-400 font-medium">Available for new projects</span>
+                <span className="text-green-400 font-medium">Disponible para nuevos proyectos</span>
               </div>
               <p className="text-gray-400 text-sm">
-                Currently accepting new clients and exciting opportunities. Average response time: 24 hours.
+                Actualmente acepto nuevos clientes y oportunidades emocionantes. Tiempo medio de respuesta: 24 horas.
               </p>
             </motion.div>
           </motion.div>
@@ -197,7 +197,7 @@ const Contact: React.FC = () => {
               {/* Name Field */}
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                  Full Name *
+                  Nombre Completo *
                 </label>
                 <input
                   type="text"
@@ -208,7 +208,7 @@ const Contact: React.FC = () => {
                   className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-colors ${
                     errors.name ? 'border-red-500' : 'border-gray-600'
                   }`}
-                  placeholder="Enter your full name"
+                  placeholder="Ingresa tu nombre completo"
                 />
                 {errors.name && (
                   <div className="flex items-center gap-2 mt-2 text-red-400 text-sm">
@@ -221,7 +221,7 @@ const Contact: React.FC = () => {
               {/* Email Field */}
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                  Email Address *
+                  Correo Electrónico *
                 </label>
                 <input
                   type="email"
@@ -232,7 +232,7 @@ const Contact: React.FC = () => {
                   className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-colors ${
                     errors.email ? 'border-red-500' : 'border-gray-600'
                   }`}
-                  placeholder="Enter your email address"
+                  placeholder="Ingresa tu correo electrónico"
                 />
                 {errors.email && (
                   <div className="flex items-center gap-2 mt-2 text-red-400 text-sm">
@@ -245,7 +245,7 @@ const Contact: React.FC = () => {
               {/* Subject Field */}
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
-                  Subject *
+                  Asunto *
                 </label>
                 <input
                   type="text"
@@ -256,7 +256,7 @@ const Contact: React.FC = () => {
                   className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-colors ${
                     errors.subject ? 'border-red-500' : 'border-gray-600'
                   }`}
-                  placeholder="What's this about?"
+                  placeholder="¿De qué se trata?"
                 />
                 {errors.subject && (
                   <div className="flex items-center gap-2 mt-2 text-red-400 text-sm">
@@ -269,7 +269,7 @@ const Contact: React.FC = () => {
               {/* Message Field */}
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                  Message *
+                  Mensaje *
                 </label>
                 <textarea
                   id="message"
@@ -280,7 +280,7 @@ const Contact: React.FC = () => {
                   className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-colors resize-none ${
                     errors.message ? 'border-red-500' : 'border-gray-600'
                   }`}
-                  placeholder="Tell me about your project or inquiry..."
+                  placeholder="Cuéntame sobre tu proyecto o consulta..."
                 />
                 {errors.message && (
                   <div className="flex items-center gap-2 mt-2 text-red-400 text-sm">
@@ -299,12 +299,12 @@ const Contact: React.FC = () => {
                 {isSubmitting ? (
                   <>
                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                    Sending...
+                    Enviando...
                   </>
                 ) : (
                   <>
                     <Send size={18} />
-                    Send Message
+                    Enviar Mensaje
                   </>
                 )}
               </button>
@@ -317,7 +317,7 @@ const Contact: React.FC = () => {
                   className="flex items-center gap-2 p-4 bg-green-500/10 border border-green-500/20 rounded-lg text-green-400"
                 >
                   <CheckCircle size={20} />
-                  <span>Message sent successfully! I'll get back to you soon.</span>
+                  <span>¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.</span>
                 </motion.div>
               )}
 
@@ -328,7 +328,7 @@ const Contact: React.FC = () => {
                   className="flex items-center gap-2 p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400"
                 >
                   <AlertCircle size={20} />
-                  <span>Something went wrong. Please try again or contact me directly.</span>
+                  <span>Algo salió mal. Por favor intenta de nuevo o contáctame directamente.</span>
                 </motion.div>
               )}
             </form>

@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full border border-blue-500/20 mb-6"
             >
               <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-              <span className="text-sm text-gray-300">Available for work</span>
+              <span className="text-sm text-gray-300">Disponible para trabajar</span>
             </motion.div>
 
             {/* Name */}
@@ -64,11 +64,11 @@ const Hero: React.FC = () => {
               className="text-xl sm:text-2xl lg:text-3xl font-medium text-gray-300 mb-6"
             >
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Full Stack Developer
+                Desarrollador Full Stack
               </span>
               <span className="text-gray-400"> & </span>
               <span className="bg-gradient-to-r from-purple-400 to-red-400 bg-clip-text text-transparent">
-                Creative Professional
+                Profesional Creativo
               </span>
             </motion.div>
 
@@ -79,8 +79,8 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.5 }}
               className="text-lg text-gray-400 mb-8 max-w-2xl"
             >
-              Crafting exceptional digital experiences through innovative web development, 
-              stunning 3D visualizations, and cutting-edge creative solutions that drive results.
+              Creando experiencias digitales excepcionales mediante desarrollo web innovador,
+              impresionantes visualizaciones 3D y soluciones creativas de vanguardia que generan resultados.
             </motion.p>
 
             {/* Location & Contact */}
@@ -112,7 +112,7 @@ const Hero: React.FC = () => {
                 className="group flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 <Download size={18} />
-                Download CV
+                Descargar CV
               </button>
               
               <button

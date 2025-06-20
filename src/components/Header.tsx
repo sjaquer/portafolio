@@ -13,12 +13,12 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   const sections = [
-    { id: 'home', label: 'Home' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'education', label: 'Education' },
-    { id: 'portfolio', label: 'Portfolio' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'home', label: 'Inicio' },
+    { id: 'experience', label: 'Experiencia' },
+    { id: 'education', label: 'Educación' },
+    { id: 'portfolio', label: 'Portafolio' },
+    { id: 'skills', label: 'Habilidades' },
+    { id: 'contact', label: 'Contacto' }
   ];
 
   const scrollToSection = (sectionId: string) => {

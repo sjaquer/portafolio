@@ -22,11 +22,11 @@ const Experience: React.FC = () => {
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Professional Experience
+              Experiencia Profesional
             </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            A journey through innovative projects and impactful contributions in the tech industry
+            Un recorrido por proyectos innovadores y contribuciones impactantes en la industria tecnológica
           </p>
         </motion.div>
 
@@ -47,7 +47,7 @@ const Experience: React.FC = () => {
                 <div className="absolute top-4 right-4">
                   <div className="flex items-center gap-2 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full">
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="text-xs text-green-400 font-medium">Current</span>
+                    <span className="text-xs text-green-400 font-medium">Actual</span>
                   </div>
                 </div>
               )}
@@ -109,10 +109,10 @@ const Experience: React.FC = () => {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
-            { number: '50+', label: 'Projects Completed' },
-            { number: '5+', label: 'Years Experience' },
-            { number: '99%', label: 'Client Satisfaction' },
-            { number: '15+', label: 'Technologies Mastered' }
+            { number: '50+', label: 'Proyectos Completados' },
+            { number: '5+', label: 'Años de Experiencia' },
+            { number: '99%', label: 'Satisfacción del Cliente' },
+            { number: '15+', label: 'Tecnologías Dominadas' }
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">

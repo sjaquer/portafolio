@@ -33,11 +33,11 @@ const Skills: React.FC = () => {
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-red-400 bg-clip-text text-transparent">
-              Skills & Expertise
+              Habilidades y Experiencia
             </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            A comprehensive toolkit spanning full-stack development, creative design, and emerging technologies
+            Un conjunto completo de herramientas que abarca desarrollo full-stack, diseño creativo y tecnologías emergentes
           </p>
         </motion.div>
 
@@ -83,7 +83,7 @@ const Skills: React.FC = () => {
                           </div>
                           <div className="text-right">
                             <div className="text-lg font-bold text-white">{skill.proficiency}%</div>
-                            <div className="text-xs text-gray-400">Proficiency</div>
+                            <div className="text-xs text-gray-400">Dominio</div>
                           </div>
                         </div>
 
@@ -131,25 +131,25 @@ const Skills: React.FC = () => {
               <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
                 20+
               </div>
-              <div className="text-gray-400 text-sm">Technologies</div>
+              <div className="text-gray-400 text-sm">Tecnologías</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-red-400 bg-clip-text text-transparent mb-2">
                 5+
               </div>
-              <div className="text-gray-400 text-sm">Years Experience</div>
+              <div className="text-gray-400 text-sm">Años de Experiencia</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold bg-gradient-to-r from-red-400 to-blue-400 bg-clip-text text-transparent mb-2">
                 6
               </div>
-              <div className="text-gray-400 text-sm">Skill Categories</div>
+              <div className="text-gray-400 text-sm">Categorías de Habilidades</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-red-400 bg-clip-text text-transparent mb-2">
                 90%
               </div>
-              <div className="text-gray-400 text-sm">Avg Proficiency</div>
+              <div className="text-gray-400 text-sm">Promedio de Dominio</div>
             </div>
           </div>
         </motion.div>
