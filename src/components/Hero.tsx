@@ -63,11 +63,11 @@ const Hero: React.FC = () => {
               className="text-xl sm:text-2xl lg:text-3xl font-medium text-gray-300 mb-6"
             >
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Solutions Developer
+                Creative Business Designer
               </span>
               <span className="text-gray-400"> & </span>
               <span className="bg-gradient-to-r from-purple-400 to-red-400 bg-clip-text text-transparent">
-                Business Creative
+                Solutions Developer
               </span>
             </motion.div>
 

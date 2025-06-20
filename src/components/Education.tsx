@@ -35,7 +35,7 @@ const Education: React.FC = () => {
           {/* Timeline Line */}
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 to-red-500 transform md:-translate-x-0.5"></div>
 
-          {/* Education Items */}
+          {/* Items de educacion*/}
           <div className="space-y-12">
             {education.map((edu, index) => (
               <motion.div
@@ -47,7 +47,7 @@ const Education: React.FC = () => {
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 } flex-col md:flex-row`}
               >
-                {/* Timeline Node */}
+                {/* Nodo Timeline  */}
                 <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-gradient-to-r from-purple-500 to-red-500 rounded-full transform md:-translate-x-2 z-10 shadow-lg">
                   <div className="absolute inset-1 bg-gray-900 rounded-full"></div>
                 </div>
@@ -119,7 +119,7 @@ const Education: React.FC = () => {
           </div>
         </div>
 
-        {/* Additional Certifications */}
+        {/* Certificacione Adicionales */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -131,12 +131,12 @@ const Education: React.FC = () => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              'Google Cloud Platform Fundamentals',
-              'Docker & Kubernetes Essentials',
-              'React Native Development',
-              'UI/UX Design Principles',
-              'Machine Learning Basics',
-              'Cybersecurity Fundamentals'
+              'Core Principles of Sustainable Business Strategy',
+              'Applications of Artificial Intelligence in Business',
+              'Data Analysis and Visualization with Excel and Power BI',
+              'Applied Python Programming for Artificial Intelligence',
+              'Fundamentals of Machine Learning and Predictive Modeling',
+              'Modern Web Application Development and Deployment',
             ].map((cert, index) => (
               <div
                 key={index}

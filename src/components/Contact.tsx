@@ -90,20 +90,20 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       label: 'Correo',
-      value: 'john@example.com',
-      href: 'mailto:john@example.com'
+      value: 'sjaquer@outlook.es',
+      href: 'mailto:sjaquer@outlook.es'
     },
     {
       icon: Phone,
       label: 'Teléfono',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '+51 946978919',
+      href: 'tel:+51 946978919'
     },
     {
       icon: MapPin,
       label: 'Ubicación',
-      value: 'San Francisco, CA',
-      href: 'https://maps.google.com?q=San+Francisco,CA'
+      value: 'Perú, Lima',
+      href: 'https://maps.app.goo.gl/gSkno6Uh64ESk8cz6'
     }
   ];
 
@@ -128,7 +128,7 @@ const Contact: React.FC = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
+          {/* Informacion de contacto */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -143,7 +143,7 @@ const Contact: React.FC = () => {
               </p>
             </div>
 
-            {/* Contact Methods */}
+            {/* Metodos de contacto */}
             <div className="space-y-6">
               {contactInfo.map((contact, index) => (
                 <motion.a
@@ -169,7 +169,7 @@ const Contact: React.FC = () => {
               ))}
             </div>
 
-            {/* Availability */}
+            {/* Disponibilidad */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -186,7 +186,7 @@ const Contact: React.FC = () => {
             </motion.div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Contacto Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -290,7 +290,7 @@ const Contact: React.FC = () => {
                 )}
               </div>
 
-              {/* Submit Button */}
+              {/* Boton enviar */}
               <button
                 type="submit"
                 disabled={isSubmitting}

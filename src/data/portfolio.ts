@@ -1,47 +1,86 @@
 import { Experience, Education, Project, Skill } from '../types';
 
 export const experiences: Experience[] = [
-  {
-    id: '1',
-    title: 'Desarrollador Full Stack Senior',
-    company: 'TechCorp Solutions',
-    duration: '2022 - Present',
-    location: 'Remote',
-    current: true,
-    techStack: ['React', 'Node.js', 'TypeScript', 'AWS', 'MongoDB'],
-    responsibilities: [
-      'Lideré el desarrollo de más de 5 aplicaciones web empresariales que atienden a más de 10k usuarios',
-      'Diseñé una infraestructura de microservicios escalable que redujo el tiempo de respuesta en un 40%',
-      'Mentoricé a 3 desarrolladores junior y establecí procesos de revisión de código',
-      'Implementé pipelines de CI/CD mejorando la eficiencia de despliegue en un 60%'
-    ]
-  },
-  {
+{
+  id: '1',
+  title: 'Asistente de Marketing Digital | Estrategia de Contenido y Optimización Web',
+  company: 'NHL Publicidad',
+  duration: 'Mayo 2025 - Actualidad',
+  location: 'Lima, Perú',
+  current: true,
+  techStack: ['YouTube', 'SEO', 'Segmentación', 'Marketing de Contenidos', 'Gestión de Proyectos'],
+  responsibilities: [
+  'Diseñé pautas estratégicas de contenido para videos en YouTube, coordinando con el equipo de producción audiovisual.',
+  'Analicé audiencias y realicé segmentación de mercado para optimizar campañas y decisiones de marca en plataformas digitales.',
+  'Colaboré en la mejora de procesos internos y el posicionamiento SEO del sitio web para aumentar la eficiencia y visibilidad online.'
+]
+
+},
+
+ {
     id: '2',
-    title: 'Desarrollador Full Stack',
-    company: 'StartupXYZ',
-    duration: '2020 - 2022',
-    location: 'San Francisco, CA',
-    techStack: ['Vue.js', 'Python', 'Django', 'PostgreSQL', 'Docker'],
+    title: 'Especialista Técnico en Soporte Informático | Diagnóstico y Mantenimiento',
+    company: 'Freelance / Independiente',
+    duration: 'Junio 2022 - Actualidad',
+    location: 'Lima, Perú',
+    techStack: ['Diagnóstico HW/SW', 'Optimización', 'Mantenimiento', 'Windows/Linux'],
     responsibilities: [
-      'Desarrollé el MVP que aseguró $2M en financiación Serie A',
-      'Construí un sistema de chat en tiempo real capaz de manejar más de 1000 usuarios concurrentes',
-      'Optimicé las consultas a la base de datos reduciendo los tiempos de carga en un 50%',
-      'Colaboré con el equipo de diseño en mejoras de UX/UI'
+      'Diagnóstico y resolución de problemas de hardware y software para clientes corporativos y particulares.',
+      'Implementación de soluciones de mejora en el rendimiento de sistemas, reduciendo tiempos de inactividad.',
+      'Mantenimiento preventivo y correctivo para asegurar la operatividad de infraestructuras tecnológicas.'
     ]
   },
+ 
   {
     id: '3',
-    title: 'Desarrollador Frontend',
-    company: 'Creative Agency',
-    duration: '2019 - 2020',
-    location: 'New York, NY',
-    techStack: ['React', 'SCSS', 'Webpack', 'Adobe Creative Suite'],
+    title: 'Asistente de Logística y Abastecimiento | Prácticas Profesionales',
+    company: 'Zeus Maritime',
+    duration: 'Abril 2025 - Mayo 2025',
+    location: 'Callao, Perú',
+    techStack: ['Gestión de Órdenes', 'Facturación', 'Compras', 'Documentación Comercial'],
     responsibilities: [
-      'Creé sitios web responsivos para más de 20 clientes en la industria del entretenimiento',
-      'Implementé animaciones personalizadas y funciones interactivas',
-      'Colaboré con diseñadores para traducir bocetos en código perfecto',
-      'Optimizé sitios para SEO y rendimiento alcanzando más de 95 en Lighthouse'
+      'Digitación y seguimiento de órdenes de compra en sistema interno de la compañía.',
+      'Emisión de facturas y guías simplificadas para distribución y exportación.',
+      'Elaboración de documentos institucionales para bancos y clientes internacionales.'
+    ]
+  },
+  {
+    id: '4',
+    title: 'Desarrollador de Entornos 3D en Tiempo Real | Visualización Interactiva',
+    company: 'Freelance / Independiente',
+    duration: 'Febrero 2018 - Abril 2025',
+    location: 'Lima, Perú',
+    techStack: ['Unreal Engine', 'Autodesk Maya', 'Diseño 3D', 'Renderizado'],
+    responsibilities: [
+      'Diseño y desarrollo de escenarios interactivos 3D para videojuegos, arquitectura y simulaciones empresariales.',
+      'Optimización de modelos y texturas 3D para mejorar rendimiento en entornos en tiempo real.',
+      'Entrega de soluciones personalizadas para clientes en sectores como entretenimiento y bienes raíces.'
+    ]
+  },
+  {
+    id: '5',
+    title: 'Técnico en Atención al Cliente y Soporte de Sistemas',
+    company: 'Gomaju Internet Gaming',
+    duration: 'Enero 2023 - Julio 2023',
+    location: 'Lima, Perú',
+    techStack: ['Soporte Técnico', 'Gestión de Inventario', 'Actualizaciones de Software'],
+    responsibilities: [
+      'Atención personalizada a usuarios y resolución de incidencias técnicas en tiempo real.',
+      'Mantenimiento y actualización de equipos de juego para garantizar una experiencia óptima.',
+      'Control de inventario de suministros y monitoreo del correcto funcionamiento del local.'
+    ]
+  },
+  {
+    id: '6',
+    title: 'Asistente Administrativo y Analista de Procesos',
+    company: 'Romaseda',
+    duration: 'Setiembre 2018 - Febrero 2020',
+    location: 'Lima, Perú',
+    techStack: ['Excel Avanzado', 'Automatización', 'Reportes Financieros'],
+    responsibilities: [
+      'Gestión documental, control de inventarios y automatización de flujos administrativos.',
+      'Diseño de reportes financieros para decisiones estratégicas.',
+      'Implementación de soluciones digitales que redujeron los tiempos de gestión en un 30%.'
     ]
   }
 ];
@@ -49,45 +88,74 @@ export const experiences: Experience[] = [
 export const education: Education[] = [
   {
     id: '1',
-    degree: 'Licenciatura en Ciencias de la Computación',
-    institution: 'University of California, Berkeley',
-    duration: '2021 - 2025',
-    status: 'Estudiante Actual',
-    gpa: '3.8/4.0',
-    relevant: ['Data Structures', 'Algorithms', 'Software Engineering', 'Machine Learning']
+    degree: 'Bachiller en Administración y Negocios Internacionales',
+    institution: 'Universidad Norbert Wiener',
+    duration: '2022 - 2026',
+    status: 'Estudiante Actual (7º ciclo)',
+    relevant: [
+      'Transformación Digital',
+      'Estrategia Empresarial',
+      'Comercio Internacional',
+      'Investigación Académica'
+    ]
   },
   {
     id: '2',
-    degree: 'Arquitecto Asociado de Soluciones AWS',
-    institution: 'Amazon Web Services',
-    duration: '2023',
-    status: 'Certificado'
+    degree: 'Diplomado en Inteligencia Artificial para los Negocios',
+    institution: 'IDAT',
+    duration: '2025',
+    status: 'En curso',
+    relevant: [
+      'Machine Learning',
+      'Chatbots',
+      'Automatización con IA',
+      'Análisis Predictivo'
+    ]
   },
   {
     id: '3',
-    degree: 'Certificado de Desarrollador Frontend de Meta',
-    institution: 'Meta (Coursera)',
+    degree: 'Curso de SQL y Bases de Datos Relacionales',
+    institution: 'IDAT',
+    duration: '2024 - 2025',
+    status: 'Finalizado',
+    relevant: [
+      'Consultas Avanzadas',
+      'Modelado Relacional',
+      'Optimización de Queries',
+      'Análisis de Datos'
+    ]
+  },
+  {
+    id: '4',
+    degree: 'Certificación de Inglés Avanzado',
+    institution: 'Instituto SISE',
     duration: '2022',
-    status: 'Completado'
+    status: 'Completado',
+    relevant: [
+      'Lectura Técnica',
+      'Redacción Formal',
+      'Comunicación Oral',
+      'Entorno Profesional'
+    ]
   }
 ];
 
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'Plataforma de Comercio Electrónico',
-    description: 'Solución de comercio electrónico full-stack con inventario en tiempo real, procesamiento de pagos y panel de administración.',
-    techStack: ['React', 'Node.js', 'MongoDB', 'Stripe', 'AWS'],
+    title: 'Digital Bakery',
+    description: 'Aplicación web para pedidos online de panadería en Lima, con sistema de gestión integrado. Diseñada para facilitar la compra a clientes y la administración para el negocio.',
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Zustand', 'Node.js', 'Express', 'PostgreSQL'],
     image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
-    liveUrl: 'https://demo-ecommerce.com',
-    githubUrl: 'https://github.com/username/ecommerce-platform',
+    liveUrl: 'https://digitalbakery.vercel.app/',
+    githubUrl: 'https://github.com/sjaquer/Proyect_Bakery',
     category: 'web',
     featured: true
   },
   {
     id: '2',
     title: 'Aplicación de Gestión de Tareas',
-    description: 'Herramienta colaborativa de gestión de proyectos con actualizaciones en tiempo real, compartición de archivos y analítica de equipo.',
+    description: 'Herramienta colaborativa para gestión de proyectos, tareas en tiempo real, archivos y analítica de equipo.',
     techStack: ['React Native', 'Firebase', 'Redux', 'TypeScript'],
     image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600',
     liveUrl: 'https://taskmanager-demo.com',
@@ -97,9 +165,9 @@ export const projects: Project[] = [
   },
   {
     id: '3',
-    title: 'Visualización Arquitectónica',
-    description: 'Renderizados 3D fotorrealistas para complejo residencial moderno utilizando Unreal Engine 5.',
-    techStack: ['Unreal Engine 5', 'Blender', 'Photoshop'],
+    title: 'Visualización Arquitectónica 3D',
+    description: 'Renderizados realistas e inmersivos de proyectos residenciales usando Unreal Engine y Blender.',
+    techStack: ['Unreal Engine 5', 'AutoDesk Maya', 'Photoshop'],
     image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600',
     category: '3d',
     featured: true
@@ -107,7 +175,7 @@ export const projects: Project[] = [
   {
     id: '4',
     title: 'Video de Identidad de Marca',
-    description: 'Gráficos en movimiento y producción de video para la campaña de lanzamiento de una startup tecnológica.',
+    description: 'Producción audiovisual para campaña de lanzamiento de una startup: motion graphics y edición profesional.',
     techStack: ['After Effects', 'Premiere Pro', 'Cinema 4D'],
     image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=600',
     category: 'video'
@@ -116,27 +184,27 @@ export const projects: Project[] = [
 
 export const skills: Skill[] = [
   // Programming Languages
-  { name: 'JavaScript', category: 'Programación', proficiency: 95, icon: 'Code' },
-  { name: 'TypeScript', category: 'Programación', proficiency: 90, icon: 'Code' },
+  { name: 'JavaScript', category: 'Programación', proficiency: 85, icon: 'Code' },
+  { name: 'TypeScript', category: 'Programación', proficiency: 80, icon: 'Code' },
   { name: 'Python', category: 'Programación', proficiency: 85, icon: 'Code' },
-  { name: 'Java', category: 'Programación', proficiency: 80, icon: 'Code' },
+  { name: 'Java', category: 'Programación', proficiency: 30, icon: 'Code' },
   
   // Frontend
-  { name: 'React', category: 'Frontend', proficiency: 95, icon: 'Globe' },
+  { name: 'React', category: 'Frontend', proficiency: 75, icon: 'Globe' },
   { name: 'Vue.js', category: 'Frontend', proficiency: 85, icon: 'Globe' },
-  { name: 'Next.js', category: 'Frontend', proficiency: 90, icon: 'Globe' },
+  { name: 'Next.js', category: 'Frontend', proficiency: 80, icon: 'Globe' },
   { name: 'Tailwind CSS', category: 'Frontend', proficiency: 95, icon: 'Palette' },
   
   // Backend
-  { name: 'Node.js', category: 'Backend', proficiency: 90, icon: 'Server' },
-  { name: 'Express.js', category: 'Backend', proficiency: 85, icon: 'Server' },
-  { name: 'Django', category: 'Backend', proficiency: 80, icon: 'Server' },
-  { name: 'GraphQL', category: 'Backend', proficiency: 75, icon: 'Database' },
+  { name: 'Node.js', category: 'Backend', proficiency: 80, icon: 'Server' },
+  { name: 'Express.js', category: 'Backend', proficiency: 75, icon: 'Server' },
+  { name: 'Django', category: 'Backend', proficiency: 60, icon: 'Server' },
+  { name: 'GraphQL', category: 'Backend', proficiency: 45, icon: 'Database' },
   
   // Design & 3D
-  { name: 'Unreal Engine', category: 'Creativo', proficiency: 85, icon: 'Gamepad2' },
-  { name: 'Blender', category: 'Creativo', proficiency: 80, icon: 'Box' },
-  { name: 'After Effects', category: 'Creativo', proficiency: 85, icon: 'Film' },
+  { name: 'Unreal Engine', category: 'Creativo', proficiency: 90, icon: 'Gamepad2' },
+  { name: 'AutoDesk Maya', category: 'Creativo', proficiency: 60, icon: 'Box' },
+  { name: 'Danvinci Resolve', category: 'Creativo', proficiency: 55, icon: 'Film' },
   { name: 'Photoshop', category: 'Creativo', proficiency: 90, icon: 'Image' },
   
   // Tools & Cloud
