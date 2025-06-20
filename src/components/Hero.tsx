@@ -4,21 +4,20 @@ import { Download, MessageCircle, Github, Linkedin, Instagram, Youtube, MapPin, 
 
 const Hero: React.FC = () => {
   const socialLinks = [
-    { icon: Github, url: 'https://github.com/username', label: 'GitHub' },
-    { icon: Linkedin, url: 'https://linkedin.com/in/username', label: 'LinkedIn' },
-    { icon: Instagram, url: 'https://instagram.com/username', label: 'Instagram' },
-    { icon: Youtube, url: 'https://youtube.com/@username', label: 'YouTube' }
+    { icon: Github, url: 'https://github.com/sjaquer', label: 'GitHub' },
+    { icon: Linkedin, url: 'https://linkedin.com/in/sjaquer', label: 'LinkedIn' },
+    { icon: Instagram, url: 'https://instagram.com/sjaquer_', label: 'Instagram' },
+    { icon: Youtube, url: 'https://youtube.com/@sjaquer', label: 'YouTube' }
   ];
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/1234567890?text=Hello! I found your portfolio and would like to connect.', '_blank');
+    window.open('https://wa.me/946978919?text=Hola, te eh contactado a través de tu pagina', '_blank');
   };
 
   const handleDownloadCV = () => {
-    // In a real application, this would download the actual CV
     const link = document.createElement('a');
-    link.href = '/cv-john-smith.pdf';
-    link.download = 'John-Smith-CV.pdf';
+    link.href = 'pdf/cv-sj-2025.pdf';
+    link.download = 'Sebastián Jaque-CV.pdf';
     link.click();
   };
 
@@ -52,11 +51,11 @@ const Hero: React.FC = () => {
               className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-4"
             >
               <span className="bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
-                John Smith
+               Sebastián Jaque
               </span>
             </motion.h1>
 
-            {/* Animated Title */}
+            {/* Titulo animado */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -64,11 +63,11 @@ const Hero: React.FC = () => {
               className="text-xl sm:text-2xl lg:text-3xl font-medium text-gray-300 mb-6"
             >
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Desarrollador Full Stack
+                Solutions Developer
               </span>
               <span className="text-gray-400"> & </span>
               <span className="bg-gradient-to-r from-purple-400 to-red-400 bg-clip-text text-transparent">
-                Profesional Creativo
+                Business Creative
               </span>
             </motion.div>
 
@@ -79,8 +78,9 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.5 }}
               className="text-lg text-gray-400 mb-8 max-w-2xl"
             >
-              Creando experiencias digitales excepcionales mediante desarrollo web innovador,
-              impresionantes visualizaciones 3D y soluciones creativas de vanguardia que generan resultados.
+              Impulsando la mejora empresarial mediante programación, 
+              soluciones creativas y tecnología aplicada; optimizando 
+              procesos y mejorando la experiencia del cliente y la empresa.
             </motion.p>
 
             {/* Location & Contact */}
@@ -92,15 +92,15 @@ const Hero: React.FC = () => {
             >
               <div className="flex items-center gap-2">
                 <MapPin size={16} />
-                <span>San Francisco, CA</span>
+                <span>Perú, Lima.</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={16} />
-                <span>john@example.com</span>
+                <span>sjaquer@outlook.es</span>
               </div>
             </motion.div>
 
-            {/* Action Buttons */}
+            {/* Botones Accionares */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -124,7 +124,7 @@ const Hero: React.FC = () => {
               </button>
             </motion.div>
 
-            {/* Social Links */}
+            {/* Redes Links */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -148,7 +148,7 @@ const Hero: React.FC = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Profile Image */}
+          {/* Columna Derecha */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -156,16 +156,16 @@ const Hero: React.FC = () => {
             className="flex justify-center lg:justify-end"
           >
             <div className="relative">
-              {/* Animated Background */}
+              {/* Fondo Animado */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-red-500/20 rounded-full blur-2xl animate-pulse"></div>
               
-              {/* Profile Image */}
+              {/* Imagen de Perfil */}
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                 <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-red-500 p-1">
                   <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
                     <img
-                      src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400"
-                      alt="John Smith"
+                      src="images/iconperso.jpg"
+                      alt="Sebastián Jaque"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -176,7 +176,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Floating WhatsApp Button */}
+      {/* Boton Flotante de Whatsapp */}
       <motion.button
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}

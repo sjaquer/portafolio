@@ -26,7 +26,7 @@ const Experience: React.FC = () => {
             </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Un recorrido por proyectos innovadores y contribuciones impactantes en la industria tecnológica
+            Un recorrido por experiencias y proyectos donde aplico visión empresarial, pensamiento creativo y desarrollo tecnológico para impulsar soluciones con impacto real.
           </p>
         </motion.div>
 
