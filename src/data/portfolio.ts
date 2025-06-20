@@ -3,45 +3,45 @@ import { Experience, Education, Project, Skill } from '../types';
 export const experiences: Experience[] = [
   {
     id: '1',
-    title: 'Senior Full Stack Developer',
+    title: 'Desarrollador Full Stack Senior',
     company: 'TechCorp Solutions',
     duration: '2022 - Present',
     location: 'Remote',
     current: true,
     techStack: ['React', 'Node.js', 'TypeScript', 'AWS', 'MongoDB'],
     responsibilities: [
-      'Led development of 5+ enterprise web applications serving 10k+ users',
-      'Architected scalable microservices infrastructure reducing response time by 40%',
-      'Mentored 3 junior developers and established code review processes',
-      'Implemented CI/CD pipelines improving deployment efficiency by 60%'
+      'Lideré el desarrollo de más de 5 aplicaciones web empresariales que atienden a más de 10k usuarios',
+      'Diseñé una infraestructura de microservicios escalable que redujo el tiempo de respuesta en un 40%',
+      'Mentoricé a 3 desarrolladores junior y establecí procesos de revisión de código',
+      'Implementé pipelines de CI/CD mejorando la eficiencia de despliegue en un 60%'
     ]
   },
   {
     id: '2',
-    title: 'Full Stack Developer',
+    title: 'Desarrollador Full Stack',
     company: 'StartupXYZ',
     duration: '2020 - 2022',
     location: 'San Francisco, CA',
     techStack: ['Vue.js', 'Python', 'Django', 'PostgreSQL', 'Docker'],
     responsibilities: [
-      'Developed MVP that secured $2M in Series A funding',
-      'Built real-time chat system handling 1000+ concurrent users',
-      'Optimized database queries reducing load times by 50%',
-      'Collaborated with design team on UX/UI improvements'
+      'Desarrollé el MVP que aseguró $2M en financiación Serie A',
+      'Construí un sistema de chat en tiempo real capaz de manejar más de 1000 usuarios concurrentes',
+      'Optimicé las consultas a la base de datos reduciendo los tiempos de carga en un 50%',
+      'Colaboré con el equipo de diseño en mejoras de UX/UI'
     ]
   },
   {
     id: '3',
-    title: 'Frontend Developer',
+    title: 'Desarrollador Frontend',
     company: 'Creative Agency',
     duration: '2019 - 2020',
     location: 'New York, NY',
     techStack: ['React', 'SCSS', 'Webpack', 'Adobe Creative Suite'],
     responsibilities: [
-      'Created responsive websites for 20+ clients in entertainment industry',
-      'Implemented custom animations and interactive features',
-      'Collaborated with designers to translate mockups into pixel-perfect code',
-      'Optimized sites for SEO and performance scoring 95+ on Lighthouse'
+      'Creé sitios web responsivos para más de 20 clientes en la industria del entretenimiento',
+      'Implementé animaciones personalizadas y funciones interactivas',
+      'Colaboré con diseñadores para traducir bocetos en código perfecto',
+      'Optimizé sitios para SEO y rendimiento alcanzando más de 95 en Lighthouse'
     ]
   }
 ];
@@ -49,34 +49,34 @@ export const experiences: Experience[] = [
 export const education: Education[] = [
   {
     id: '1',
-    degree: 'Bachelor of Science in Computer Science',
+    degree: 'Licenciatura en Ciencias de la Computación',
     institution: 'University of California, Berkeley',
     duration: '2021 - 2025',
-    status: 'Current Student',
+    status: 'Estudiante Actual',
     gpa: '3.8/4.0',
     relevant: ['Data Structures', 'Algorithms', 'Software Engineering', 'Machine Learning']
   },
   {
     id: '2',
-    degree: 'AWS Solutions Architect Associate',
+    degree: 'Arquitecto Asociado de Soluciones AWS',
     institution: 'Amazon Web Services',
     duration: '2023',
-    status: 'Certified'
+    status: 'Certificado'
   },
   {
     id: '3',
-    degree: 'Meta Frontend Developer Certificate',
+    degree: 'Certificado de Desarrollador Frontend de Meta',
     institution: 'Meta (Coursera)',
     duration: '2022',
-    status: 'Completed'
+    status: 'Completado'
   }
 ];
 
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with real-time inventory, payment processing, and admin dashboard.',
+    title: 'Plataforma de Comercio Electrónico',
+    description: 'Solución de comercio electrónico full-stack con inventario en tiempo real, procesamiento de pagos y panel de administración.',
     techStack: ['React', 'Node.js', 'MongoDB', 'Stripe', 'AWS'],
     image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
     liveUrl: 'https://demo-ecommerce.com',
@@ -86,8 +86,8 @@ export const projects: Project[] = [
   },
   {
     id: '2',
-    title: 'Task Management App',
-    description: 'Collaborative project management tool with real-time updates, file sharing, and team analytics.',
+    title: 'Aplicación de Gestión de Tareas',
+    description: 'Herramienta colaborativa de gestión de proyectos con actualizaciones en tiempo real, compartición de archivos y analítica de equipo.',
     techStack: ['React Native', 'Firebase', 'Redux', 'TypeScript'],
     image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600',
     liveUrl: 'https://taskmanager-demo.com',
@@ -97,8 +97,8 @@ export const projects: Project[] = [
   },
   {
     id: '3',
-    title: 'Architectural Visualization',
-    description: 'Photorealistic 3D renderings for modern residential complex using Unreal Engine 5.',
+    title: 'Visualización Arquitectónica',
+    description: 'Renderizados 3D fotorrealistas para complejo residencial moderno utilizando Unreal Engine 5.',
     techStack: ['Unreal Engine 5', 'Blender', 'Photoshop'],
     image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600',
     category: '3d',
@@ -106,8 +106,8 @@ export const projects: Project[] = [
   },
   {
     id: '4',
-    title: 'Brand Identity Video',
-    description: 'Motion graphics and video production for tech startup brand launch campaign.',
+    title: 'Video de Identidad de Marca',
+    description: 'Gráficos en movimiento y producción de video para la campaña de lanzamiento de una startup tecnológica.',
     techStack: ['After Effects', 'Premiere Pro', 'Cinema 4D'],
     image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=600',
     category: 'video'
@@ -116,10 +116,10 @@ export const projects: Project[] = [
 
 export const skills: Skill[] = [
   // Programming Languages
-  { name: 'JavaScript', category: 'Programming', proficiency: 95, icon: 'Code' },
-  { name: 'TypeScript', category: 'Programming', proficiency: 90, icon: 'Code' },
-  { name: 'Python', category: 'Programming', proficiency: 85, icon: 'Code' },
-  { name: 'Java', category: 'Programming', proficiency: 80, icon: 'Code' },
+  { name: 'JavaScript', category: 'Programación', proficiency: 95, icon: 'Code' },
+  { name: 'TypeScript', category: 'Programación', proficiency: 90, icon: 'Code' },
+  { name: 'Python', category: 'Programación', proficiency: 85, icon: 'Code' },
+  { name: 'Java', category: 'Programación', proficiency: 80, icon: 'Code' },
   
   // Frontend
   { name: 'React', category: 'Frontend', proficiency: 95, icon: 'Globe' },
@@ -134,14 +134,14 @@ export const skills: Skill[] = [
   { name: 'GraphQL', category: 'Backend', proficiency: 75, icon: 'Database' },
   
   // Design & 3D
-  { name: 'Unreal Engine', category: 'Creative', proficiency: 85, icon: 'Gamepad2' },
-  { name: 'Blender', category: 'Creative', proficiency: 80, icon: 'Box' },
-  { name: 'After Effects', category: 'Creative', proficiency: 85, icon: 'Film' },
-  { name: 'Photoshop', category: 'Creative', proficiency: 90, icon: 'Image' },
+  { name: 'Unreal Engine', category: 'Creativo', proficiency: 85, icon: 'Gamepad2' },
+  { name: 'Blender', category: 'Creativo', proficiency: 80, icon: 'Box' },
+  { name: 'After Effects', category: 'Creativo', proficiency: 85, icon: 'Film' },
+  { name: 'Photoshop', category: 'Creativo', proficiency: 90, icon: 'Image' },
   
   // Tools & Cloud
   { name: 'AWS', category: 'DevOps', proficiency: 85, icon: 'Cloud' },
   { name: 'Docker', category: 'DevOps', proficiency: 80, icon: 'Package' },
   { name: 'Git', category: 'DevOps', proficiency: 95, icon: 'GitBranch' },
-  { name: 'MongoDB', category: 'Database', proficiency: 85, icon: 'Database' }
+  { name: 'MongoDB', category: 'Base de Datos', proficiency: 85, icon: 'Database' }
 ];

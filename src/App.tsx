@@ -63,7 +63,7 @@ function App() {
             transition={{ delay: 0.2 }}
             className="text-white text-xl font-medium mb-2"
           >
-            Loading Portfolio
+            Cargando Portafolio
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -71,7 +71,7 @@ function App() {
             transition={{ delay: 0.4 }}
             className="text-gray-400 text-sm"
           >
-            Preparing something amazing...
+            Preparando algo increíble...
           </motion.div>
         </div>
       </div>

@@ -13,11 +13,11 @@ const Footer: React.FC = () => {
   ];
 
   const quickLinks = [
-    { label: 'Experience', href: '#experience' },
-    { label: 'Education', href: '#education' },
-    { label: 'Portfolio', href: '#portfolio' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Contact', href: '#contact' }
+    { label: 'Experiencia', href: '#experience' },
+    { label: 'Educación', href: '#education' },
+    { label: 'Portafolio', href: '#portfolio' },
+    { label: 'Habilidades', href: '#skills' },
+    { label: 'Contacto', href: '#contact' }
   ];
 
   const scrollToSection = (href: string) => {
@@ -43,8 +43,8 @@ const Footer: React.FC = () => {
                 John Smith
               </h3>
               <p className="text-gray-400 max-w-md">
-                Full Stack Developer & Creative Professional crafting exceptional digital experiences 
-                through innovative web development and stunning visual design.
+                Desarrollador Full Stack y Profesional Creativo que crea experiencias digitales excepcionales
+                mediante desarrollo web innovador y un diseño visual impresionante.
               </p>
             </motion.div>
 
@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+              <h4 className="text-white font-semibold mb-4">Enlaces Rápidos</h4>
               <ul className="space-y-2">
                 {quickLinks.map((link, index) => (
                   <li key={index}>
@@ -121,14 +121,14 @@ const Footer: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h4 className="text-white font-semibold mb-4">Services</h4>
+              <h4 className="text-white font-semibold mb-4">Servicios</h4>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li>Web Development</li>
-                <li>Mobile App Development</li>
-                <li>3D Visualization</li>
-                <li>UI/UX Design</li>
-                <li>Video Production</li>
-                <li>Consulting</li>
+                <li>Desarrollo Web</li>
+                <li>Desarrollo de Apps Móviles</li>
+                <li>Visualización 3D</li>
+                <li>Diseño UI/UX</li>
+                <li>Producción de Video</li>
+                <li>Consultoría</li>
               </ul>
             </motion.div>
           </div>
@@ -142,14 +142,14 @@ const Footer: React.FC = () => {
           className="mt-12 pt-8 border-t border-gray-800/50 flex flex-col sm:flex-row items-center justify-between gap-4"
         >
           <div className="flex items-center gap-2 text-gray-400 text-sm">
-            <span>© {currentYear} John Smith. Made with</span>
+            <span>© {currentYear} John Smith. Hecho con</span>
             <Heart className="text-red-400" size={14} />
-            <span>using React & TypeScript</span>
+            <span>usando React y TypeScript</span>
           </div>
           
           <div className="flex items-center gap-6 text-sm text-gray-400">
-            <button className="hover:text-white transition-colors">Privacy Policy</button>
-            <button className="hover:text-white transition-colors">Terms of Service</button>
+            <button className="hover:text-white transition-colors">Política de Privacidad</button>
+            <button className="hover:text-white transition-colors">Términos de Servicio</button>
           </div>
         </motion.div>
       </div>

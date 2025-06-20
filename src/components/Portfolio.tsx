@@ -14,11 +14,11 @@ const Portfolio: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
   const categories = [
-    { id: 'all', label: 'All Projects', icon: Code },
-    { id: 'web', label: 'Web Development', icon: Code },
-    { id: 'mobile', label: 'Mobile Apps', icon: Palette },
+    { id: 'all', label: 'Todos los Proyectos', icon: Code },
+    { id: 'web', label: 'Desarrollo Web', icon: Code },
+    { id: 'mobile', label: 'Aplicaciones Móviles', icon: Palette },
     { id: '3d', label: 'Unreal Engine', icon: Box },
-    { id: 'video', label: 'Video & Motion', icon: Film }
+    { id: 'video', label: 'Video y Animación', icon: Film }
   ];
 
   const filteredProjects = filter === 'all' 
@@ -47,11 +47,11 @@ const Portfolio: React.FC = () => {
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-red-400 to-purple-400 bg-clip-text text-transparent">
-              Featured Portfolio
+              Portafolio Destacado
             </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            A showcase of innovative projects spanning web development, mobile apps, 3D visualization, and creative media
+            Una muestra de proyectos innovadores que abarcan desarrollo web, aplicaciones móviles, visualización 3D y medios creativos
           </p>
         </motion.div>
 
@@ -110,7 +110,7 @@ const Portfolio: React.FC = () => {
                   {/* Featured Badge */}
                   {project.featured && (
                     <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-red-500 to-purple-500 text-white text-xs font-medium rounded-full">
-                      Featured
+                      Destacado
                     </div>
                   )}
 
@@ -127,7 +127,7 @@ const Portfolio: React.FC = () => {
                         className="flex items-center gap-2 px-3 py-2 bg-red-600 text-white rounded-lg text-sm font-medium hover:bg-red-700 transition-colors"
                       >
                         <ExternalLink size={14} />
-                        Live Demo
+                        Ver Demo
                       </a>
                     )}
                     {project.githubUrl && (
@@ -138,7 +138,7 @@ const Portfolio: React.FC = () => {
                         className="flex items-center gap-2 px-3 py-2 bg-gray-800 text-white rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors"
                       >
                         <Github size={14} />
-                        Code
+                        Código
                       </a>
                     )}
                   </div>
@@ -181,7 +181,7 @@ const Portfolio: React.FC = () => {
           className="text-center mt-12"
         >
           <p className="text-gray-400 mb-6">
-            Interested in seeing more of my work?
+            ¿Interesado en ver más de mi trabajo?
           </p>
           <a
             href="https://github.com/username"
@@ -190,7 +190,7 @@ const Portfolio: React.FC = () => {
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-600 to-purple-600 text-white rounded-lg font-medium hover:from-red-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
           >
             <Github size={18} />
-            View All Projects on GitHub
+            Ver todos los proyectos en GitHub
           </a>
         </motion.div>
       </div>

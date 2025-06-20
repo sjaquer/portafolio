@@ -22,11 +22,11 @@ const Education: React.FC = () => {
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-purple-400 to-red-400 bg-clip-text text-transparent">
-              Education & Certifications
+              Educación y Certificaciones
             </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Continuous learning and professional development through formal education and industry certifications
+            Aprendizaje continuo y desarrollo profesional mediante educación formal y certificaciones de la industria
           </p>
         </motion.div>
 
@@ -96,7 +96,7 @@ const Education: React.FC = () => {
                     {/* Relevant Courses */}
                     {edu.relevant && (
                       <div className="space-y-2">
-                        <p className="text-sm text-gray-400 font-medium">Relevant Coursework:</p>
+                        <p className="text-sm text-gray-400 font-medium">Cursos Relevantes:</p>
                         <div className="flex flex-wrap gap-2">
                           {edu.relevant.map((course, courseIndex) => (
                             <span
@@ -127,7 +127,7 @@ const Education: React.FC = () => {
           className="mt-16"
         >
           <h3 className="text-2xl font-bold text-center mb-8 text-white">
-            Additional Learning & Development
+            Aprendizaje y Desarrollo Adicional
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
