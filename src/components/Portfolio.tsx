@@ -50,7 +50,7 @@ const Portfolio: React.FC = () => {
               Portafolio Destacado
             </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             Una muestra de proyectos innovadores que abarcan desarrollo web, aplicaciones móviles, visualización 3D y medios creativos
           </p>
         </motion.div>
@@ -180,7 +180,7 @@ const Portfolio: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-12"
         >
-          <p className="text-gray-400 mb-6">
+          <p className="text-gray-600 dark:text-gray-400 mb-6">
             ¿Interesado en ver más de mi trabajo?
           </p>
           <a
