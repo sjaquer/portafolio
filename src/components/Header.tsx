@@ -61,9 +61,11 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
               </button>
             ))}
           </nav>
-
           {/* Mobile Menu Button */}
           <div className="flex items-center">
+          {/* Mobile Menu */}
+          <div className="flex items-center space-x-4">
+            {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2 rounded-lg bg-gray-800 text-gray-300 hover:text-white transition-colors"
