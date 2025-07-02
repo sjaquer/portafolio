@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* Left Column - Main Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -160,11 +160,11 @@ const Hero: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-red-500/20 rounded-full blur-2xl animate-pulse"></div>
               
               {/* Imagen de Perfil */}
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+              <div className="relative w-48 h-48 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                 <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-red-500 p-1">
                   <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
                     <img
-                      src="images/iconperso.jpg"
+                      src="/images/iconperso.jpg"
                       alt="Sebastián Jaque"
                       className="w-full h-full object-cover"
                     />
