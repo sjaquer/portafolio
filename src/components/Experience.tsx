@@ -25,7 +25,7 @@ const Experience: React.FC = () => {
               Experiencia Profesional
             </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             Un recorrido por experiencias y proyectos donde aplico visión empresarial, pensamiento creativo y desarrollo tecnológico para impulsar soluciones con impacto real.
           </p>
         </motion.div>
@@ -120,7 +120,7 @@ const Experience: React.FC = () => {
               <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
                 {stat.number}
               </div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
+              <div className="text-gray-600 dark:text-gray-400 text-sm">{stat.label}</div>
             </div>
           ))}
         </motion.div>

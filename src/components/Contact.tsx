@@ -122,7 +122,7 @@ const Contact: React.FC = () => {
               Trabajemos Juntos
             </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             ¿Listo para dar vida a tus ideas? Ponte en contacto y creemos algo increíble juntos.
           </p>
         </motion.div>
@@ -136,8 +136,8 @@ const Contact: React.FC = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Ponte en Contacto</h3>
-              <p className="text-gray-400 mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Ponte en Contacto</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-8">
                 Siempre estoy abierto a discutir nuevas oportunidades, proyectos creativos o posibles colaboraciones.
                 Ya sea que tengas un proyecto específico en mente o simplemente quieras explorar posibilidades, me encantaría saber de ti.
               </p>
@@ -160,8 +160,8 @@ const Contact: React.FC = () => {
                     <contact.icon className="text-purple-400 group-hover:text-white transition-colors" size={24} />
                   </div>
                   <div>
-                    <div className="text-gray-400 text-sm">{contact.label}</div>
-                    <div className="text-white font-medium group-hover:text-purple-400 transition-colors">
+                    <div className="text-gray-600 dark:text-gray-400 text-sm">{contact.label}</div>
+                    <div className="text-gray-900 dark:text-white font-medium group-hover:text-purple-400 transition-colors">
                       {contact.value}
                     </div>
                   </div>
@@ -180,7 +180,7 @@ const Contact: React.FC = () => {
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-green-400 font-medium">Disponible para nuevos proyectos</span>
               </div>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
                 Actualmente acepto nuevos clientes y oportunidades emocionantes. Tiempo medio de respuesta: 24 horas.
               </p>
             </motion.div>
@@ -196,7 +196,7 @@ const Contact: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Field */}
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Nombre Completo *
                 </label>
                 <input
@@ -220,7 +220,7 @@ const Contact: React.FC = () => {
 
               {/* Email Field */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Correo Electrónico *
                 </label>
                 <input
@@ -244,7 +244,7 @@ const Contact: React.FC = () => {
 
               {/* Subject Field */}
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Asunto *
                 </label>
                 <input
@@ -268,7 +268,7 @@ const Contact: React.FC = () => {
 
               {/* Message Field */}
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Mensaje *
                 </label>
                 <textarea
