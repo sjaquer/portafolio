@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Moon, Sun, Menu, X } from 'lucide-react';
-import { useTheme } from '../hooks/useTheme';
+import { Menu, X } from 'lucide-react';
 
 interface HeaderProps {
   activeSection: string;
@@ -9,7 +8,6 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
-  const { isDark, toggleTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   const sections = [
@@ -17,6 +15,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
     { id: 'experience', label: 'Experiencia' },
     { id: 'education', label: 'Educación' },
     { id: 'portfolio', label: 'Portafolio' },
+    { id: 'gallery', label: 'Galería' },
     { id: 'skills', label: 'Habilidades' },
     { id: 'contact', label: 'Contacto' }
   ];
@@ -34,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 w-full overflow-x-hidden bg-gray-900/90 dark:bg-gray-900/90 backdrop-blur-lg border-b border-gray-800/50"
+      className="fixed top-0 left-0 right-0 z-50 w-full overflow-x-hidden bg-gray-900/90 backdrop-blur-lg border-b border-gray-800/50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -63,18 +62,8 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
             ))}
           </nav>
 
-          {/* Theme Toggle & Mobile Menu */}
-          <div className="flex items-center space-x-4">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-800 text-gray-300 hover:text-white transition-colors"
-            >
-              {isDark ? <Sun size={18} /> : <Moon size={18} />}
-            </motion.button>
-
-            {/* Mobile Menu Button */}
+          {/* Mobile Menu Button */}
+          <div className="flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2 rounded-lg bg-gray-800 text-gray-300 hover:text-white transition-colors"

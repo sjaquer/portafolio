@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Portfolio from './components/Portfolio';
+import Gallery from './components/Gallery';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -24,7 +25,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'experience', 'education', 'portfolio', 'skills', 'contact'];
+      const sections = ['home', 'experience', 'education', 'portfolio', 'gallery', 'skills', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -47,7 +48,7 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+      <div className="min-h-screen flex items-center justify-center bg-white text-gray-900">
         <div className="text-center">
           <motion.div
             initial={{ scale: 0 }}
@@ -85,7 +86,7 @@ function App() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
-        className="min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white"
+        className="min-h-screen bg-white text-gray-900"
       >
         <Header activeSection={activeSection} setActiveSection={setActiveSection} />
         
@@ -94,6 +95,7 @@ function App() {
           <Experience />
           <Education />
           <Portfolio />
+          <Gallery />
           <Skills />
           <Contact />
         </main>
