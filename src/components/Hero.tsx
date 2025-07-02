@@ -1,6 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, MessageCircle, Github, Linkedin, Instagram, Youtube, MapPin, Mail } from 'lucide-react';
+import {
+  Download,
+  MessageCircle,
+  Github,
+  Linkedin,
+  Instagram,
+  Youtube,
+  MapPin,
+  Mail,
+  Briefcase,
+  Code,
+  Camera,
+  Palette
+} from 'lucide-react';
 import profileImg from '../../images/iconperso.jpg';
 
 const Hero: React.FC = () => {
@@ -9,6 +22,13 @@ const Hero: React.FC = () => {
     { icon: Linkedin, url: 'https://linkedin.com/in/sjaquer', label: 'LinkedIn' },
     { icon: Instagram, url: 'https://instagram.com/sjaquer_', label: 'Instagram' },
     { icon: Youtube, url: 'https://youtube.com/@sjaquer', label: 'YouTube' }
+  ];
+
+  const specialties = [
+    { icon: Briefcase, label: 'Administración de Negocios', color: 'from-blue-400 to-cyan-400' },
+    { icon: Code, label: 'Desarrollo de Software', color: 'from-purple-400 to-pink-400' },
+    { icon: Camera, label: 'Fotografía Profesional', color: 'from-green-400 to-emerald-400' },
+    { icon: Palette, label: 'Diseño 3D', color: 'from-red-400 to-orange-400' }
   ];
 
   const handleWhatsApp = () => {
@@ -25,7 +45,7 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Main Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -84,11 +104,31 @@ const Hero: React.FC = () => {
               procesos y mejorando la experiencia del cliente y la empresa.
             </motion.p>
 
-            {/* Location & Contact */}
+            {/* Especialidades */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
+              className="grid grid-cols-2 gap-3 mb-8"
+            >
+              {specialties.map((specialty, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-2 p-3 bg-gray-800/50 rounded-lg border border-gray-700/50 hover:border-purple-500/30 transition-all duration-300"
+                >
+                  <div className={`p-2 bg-gradient-to-r ${specialty.color} bg-opacity-20 rounded-lg`}>
+                    <specialty.icon size={16} className={`bg-gradient-to-r ${specialty.color} bg-clip-text text-transparent`} />
+                  </div>
+                  <span className="text-xs text-gray-300 font-medium">{specialty.label}</span>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* Location & Contact */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
               className="flex flex-wrap items-center justify-center lg:justify-start gap-6 mb-8 text-gray-400"
             >
               <div className="flex items-center gap-2">
@@ -105,7 +145,7 @@ const Hero: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
+              transition={{ delay: 0.8 }}
               className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8"
             >
               <button
@@ -125,11 +165,11 @@ const Hero: React.FC = () => {
               </button>
             </motion.div>
 
-            {/* Redes Links */}
+            {/* Enlaces Sociales */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
+              transition={{ delay: 0.9 }}
               className="flex gap-4 justify-center lg:justify-start"
             >
               {socialLinks.map((social, index) => (
@@ -161,7 +201,7 @@ const Hero: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-red-500/20 rounded-full blur-2xl animate-pulse"></div>
               
               {/* Imagen de Perfil */}
-              <div className="relative w-48 h-48 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                 <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-red-500 p-1">
                   <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
                     <img
@@ -172,6 +212,34 @@ const Hero: React.FC = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Indicadores de Especialidad Flotantes */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1.2, type: 'spring' }}
+                className="absolute -top-4 -right-4 p-3 bg-blue-500 rounded-full shadow-lg"
+              >
+                <Briefcase size={20} className="text-white" />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1.4, type: 'spring' }}
+                className="absolute -bottom-4 -left-4 p-3 bg-purple-500 rounded-full shadow-lg"
+              >
+                <Code size={20} className="text-white" />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1.6, type: 'spring' }}
+                className="absolute top-1/2 -left-6 p-3 bg-green-500 rounded-full shadow-lg"
+              >
+                <Camera size={20} className="text-white" />
+              </motion.div>
             </div>
           </motion.div>
         </div>
