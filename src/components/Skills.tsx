@@ -36,7 +36,7 @@ const Skills: React.FC = () => {
               Habilidades y Experiencia
             </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             Un conjunto completo de herramientas que abarca desarrollo full-stack, diseño creativo y tecnologías emergentes
           </p>
         </motion.div>
@@ -106,25 +106,25 @@ const Skills: React.FC = () => {
               <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
                 20+
               </div>
-              <div className="text-gray-400 text-sm">Tecnologías</div>
+              <div className="text-gray-600 dark:text-gray-400 text-sm">Tecnologías</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-red-400 bg-clip-text text-transparent mb-2">
                 5+
               </div>
-              <div className="text-gray-400 text-sm">Años de Experiencia</div>
+              <div className="text-gray-600 dark:text-gray-400 text-sm">Años de Experiencia</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold bg-gradient-to-r from-red-400 to-blue-400 bg-clip-text text-transparent mb-2">
                 6
               </div>
-              <div className="text-gray-400 text-sm">Categorías de Habilidades</div>
+              <div className="text-gray-600 dark:text-gray-400 text-sm">Categorías de Habilidades</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-red-400 bg-clip-text text-transparent mb-2">
                 90%
               </div>
-              <div className="text-gray-400 text-sm">Promedio de Dominio</div>
+              <div className="text-gray-600 dark:text-gray-400 text-sm">Promedio de Dominio</div>
             </div>
           </div>
         </motion.div>

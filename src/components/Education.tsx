@@ -25,7 +25,7 @@ const Education: React.FC = () => {
               Educación y Certificaciones
             </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             Aprendizaje continuo y desarrollo profesional mediante educación formal y certificaciones de la industria
           </p>
         </motion.div>
