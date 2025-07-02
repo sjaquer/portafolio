@@ -23,6 +23,11 @@ body {
   overflow-x: hidden;
 }
 
+/* Prevent horizontal scroll from transformed elements */
+section {
+  overflow-x: hidden;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
