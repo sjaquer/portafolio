@@ -44,3 +44,12 @@ export interface ContactForm {
   subject: string;
   message: string;
 }
+
+export interface GalleryItem {
+  id: string;
+  title: string;
+  type: 'photo' | 'video';
+  thumbnail: string;
+  url: string;
+  span?: string;
+}

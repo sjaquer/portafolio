@@ -1,4 +1,4 @@
-import { Experience, Education, Project, Skill } from '../types';
+import { Experience, Education, Project, Skill, GalleryItem } from '../types';
 
 export const experiences: Experience[] = [
 {
@@ -211,5 +211,59 @@ export const skills: Skill[] = [
   { name: 'AWS', category: 'DevOps', proficiency: 85, icon: 'Cloud' },
   { name: 'Docker', category: 'DevOps', proficiency: 80, icon: 'Package' },
   { name: 'Git', category: 'DevOps', proficiency: 95, icon: 'GitBranch' },
-  { name: 'MongoDB', category: 'Base de Datos', proficiency: 85, icon: 'Database' }
+  { name: 'MongoDB', category: 'Base de Datos', proficiency: 85, icon: 'Database' },
+
+  // Administrative
+  { name: 'Planificación Estratégica', category: 'Administrativas', proficiency: 80, icon: 'TrendingUp' },
+  { name: 'Gestión de Proyectos', category: 'Administrativas', proficiency: 85, icon: 'ClipboardList' },
+  { name: 'Análisis Financiero', category: 'Administrativas', proficiency: 75, icon: 'PieChart' },
+  { name: 'Comercio Internacional', category: 'Administrativas', proficiency: 70, icon: 'Globe' },
+  { name: 'Logística y Abastecimiento', category: 'Administrativas', proficiency: 65, icon: 'Truck' },
+  { name: 'Negociación', category: 'Administrativas', proficiency: 80, icon: 'Handshake' }
+];
+
+export const gallery: GalleryItem[] = [
+  {
+    id: '1',
+    title: 'Retrato Corporativo',
+    type: 'photo',
+    thumbnail: 'https://images.pexels.com/photos/3778615/pexels-photo-3778615.jpeg?auto=compress&cs=tinysrgb&w=600',
+    url: 'https://images.pexels.com/photos/3778615/pexels-photo-3778615.jpeg'
+  },
+  {
+    id: '2',
+    title: 'Video Promocional',
+    type: 'video',
+    thumbnail: 'https://images.pexels.com/videos/8561281/free-video-8561281.jpg?auto=compress&cs=tinysrgb&w=600',
+    url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+  },
+  {
+    id: '3',
+    title: 'Producto en Estudio',
+    type: 'photo',
+    thumbnail: 'https://images.pexels.com/photos/1111368/pexels-photo-1111368.jpeg?auto=compress&cs=tinysrgb&w=600',
+    url: 'https://images.pexels.com/photos/1111368/pexels-photo-1111368.jpeg'
+  },
+  {
+    id: '4',
+    title: 'Behind the Scenes',
+    type: 'video',
+    thumbnail: 'https://images.pexels.com/photos/2754961/pexels-photo-2754961.jpeg?auto=compress&cs=tinysrgb&w=600',
+    url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+  },
+  {
+    id: '5',
+    title: 'Fotografía de Naturaleza',
+    type: 'photo',
+    thumbnail: 'https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&w=600',
+    url: 'https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg'
+  },
+  {
+    id: '6',
+    title: 'Corto Experimental',
+    type: 'video',
+    thumbnail: 'https://images.pexels.com/photos/7991379/pexels-photo-7991379.jpeg?auto=compress&cs=tinysrgb&w=600',
+    url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    span: 'md:col-span-2'
+  }
 ];
