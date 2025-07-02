@@ -113,10 +113,6 @@ textarea:focus-visible {
   outline-offset: 2px;
 }
 
-/* Dark theme styles */
-.dark {
-  color-scheme: dark;
-}
 
 /* Smooth transitions */
 * {
