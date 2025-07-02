@@ -184,7 +184,7 @@ const Portfolio: React.FC = () => {
             ¿Interesado en ver más de mi trabajo?
           </p>
           <a
-            href="https://github.com/username"
+            href="https://github.com/sjaquer"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-600 to-purple-600 text-white rounded-lg font-medium hover:from-red-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
