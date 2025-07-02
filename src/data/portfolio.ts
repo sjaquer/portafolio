@@ -92,6 +92,7 @@ export const education: Education[] = [
     institution: 'Universidad Norbert Wiener',
     duration: '2022 - 2026',
     status: 'Estudiante Actual (7º ciclo)',
+    certificateUrl: 'pdf/cert1.pdf',
     relevant: [
       'Transformación Digital',
       'Estrategia Empresarial',
@@ -105,6 +106,7 @@ export const education: Education[] = [
     institution: 'IDAT',
     duration: '2025',
     status: 'En curso',
+    certificateUrl: 'pdf/cert1.pdf',
     relevant: [
       'Machine Learning',
       'Chatbots',
@@ -118,6 +120,7 @@ export const education: Education[] = [
     institution: 'IDAT',
     duration: '2024 - 2025',
     status: 'Finalizado',
+    certificateUrl: 'pdf/cert1.pdf',
     relevant: [
       'Consultas Avanzadas',
       'Modelado Relacional',
@@ -131,6 +134,7 @@ export const education: Education[] = [
     institution: 'Instituto SISE',
     duration: '2022',
     status: 'Completado',
+    certificateUrl: 'pdf/cert1.pdf',
     relevant: [
       'Lectura Técnica',
       'Redacción Formal',

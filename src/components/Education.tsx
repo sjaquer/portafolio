@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { GraduationCap, Award, Calendar, ExternalLink } from 'lucide-react';
+import { GraduationCap, Award, Calendar } from 'lucide-react';
 import { education } from '../data/portfolio';
 
 const Education: React.FC = () => {
@@ -56,7 +56,15 @@ const Education: React.FC = () => {
                 <div className={`w-full md:w-5/12 ml-12 md:ml-0 ${
                   index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'
                 }`}>
-                  <div className="group bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300">
+                  <div
+                    onClick={() => {
+                      if (edu.certificateUrl) {
+                        window.open(edu.certificateUrl, '_blank');
+                      }
+                    }}
+                    className="group bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300"
+                    style={{ cursor: edu.certificateUrl ? 'pointer' : 'default' }}
+                  >
                     {/* Status Badge */}
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-2">

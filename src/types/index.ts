@@ -17,6 +17,7 @@ export interface Education {
   status: string;
   gpa?: string;
   relevant?: string[];
+  certificateUrl?: string;
 }
 
 export interface Project {
