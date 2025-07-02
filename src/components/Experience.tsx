@@ -38,7 +38,9 @@ const Experience: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm hover:border-blue-500/30 transition-all duration-300 ${
+              className={`group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 rounded-2xl p-6 ${
+                exp.current ? 'pt-10' : ''
+              } backdrop-blur-sm hover:border-blue-500/30 transition-all duration-300 ${
                 index === 0 ? 'lg:col-span-2' : ''
               }`}
             >
