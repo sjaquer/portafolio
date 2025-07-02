@@ -45,3 +45,10 @@ export interface ContactForm {
   subject: string;
   message: string;
 }
+
+export interface GalleryItem {
+  id: string;
+  type: 'image' | 'video';
+  src: string;
+  alt: string;
+}
