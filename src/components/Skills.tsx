@@ -61,7 +61,7 @@ const Skills: React.FC = () => {
                 </div>
 
                 {/* Skills Grid */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 place-items-center">
                   {categorySkills.map((skill, skillIndex) => {
                     const IconComponent = getIconComponent(skill.icon);
 
@@ -74,7 +74,7 @@ const Skills: React.FC = () => {
                           duration: 0.4,
                           delay: categoryIndex * 0.1 + skillIndex * 0.05
                         }}
-                        className="group relative flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 rounded-xl p-6 h-32 backdrop-blur-sm hover:border-blue-500/30 transition-all duration-300"
+                        className="skill-card group relative flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 rounded-xl p-6 h-32 backdrop-blur-sm hover:border-blue-500/30 transition-all duration-300"
                       >
                         <div className="p-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg">
                           <IconComponent className="text-blue-400 group-hover:text-white transition-colors" size={28} />
@@ -84,7 +84,7 @@ const Skills: React.FC = () => {
                           {skill.name}
                         </h4>
 
-                        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className="shine-effect absolute inset-0 rounded-xl pointer-events-none"></div>
                       </motion.div>
                     );
                   })}

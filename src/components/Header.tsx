@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Moon, Sun, Menu, X } from 'lucide-react';
-import { useTheme } from '../hooks/useTheme';
+import { Menu, X } from 'lucide-react';
 
 interface HeaderProps {
   activeSection: string;
@@ -9,7 +8,6 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
-  const { isDark, toggleTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   const sections = [
@@ -63,16 +61,8 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
             ))}
           </nav>
 
-          {/* Theme Toggle & Mobile Menu */}
+          {/* Mobile Menu */}
           <div className="flex items-center space-x-4">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-800 text-gray-300 hover:text-white transition-colors"
-            >
-              {isDark ? <Sun size={18} /> : <Moon size={18} />}
-            </motion.button>
 
             {/* Mobile Menu Button */}
             <button
