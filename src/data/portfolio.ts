@@ -141,6 +141,175 @@ export const education: Education[] = [
       'Comunicación Oral',
       'Entorno Profesional'
     ]
+      },
+  {
+    id: '5',
+    degree: 'Curso: Inteligencia Artificial Generativa para Ejecutivos (Francés)',
+    institution: 'AWS Training & Certification',
+    duration: '2025',
+    status: 'Completado',
+    certificateUrl: 'pdf/aws-ia-ejecutivos.pdf',
+    relevant: [
+      'Inteligencia Artificial Generativa',
+      'Aplicaciones Ejecutivas',
+      'Lengua Francesa'
+    ]
+  },
+  {
+    id: '6',
+    degree: 'Curso: Fundamentos de la Sostenibilidad Organizacional',
+    institution: 'Arizona State University / Universidad Norbert Wiener',
+    duration: '2024',
+    status: 'Completado',
+    certificateUrl: 'pdf/sostenibilidad-organizacional.pdf',
+    relevant: [
+      'Sostenibilidad Empresarial',
+      'Gestión Organizacional',
+      'Responsabilidad Corporativa'
+    ]
+  },
+  {
+    id: '7',
+    degree: 'Curso: Fundamentos de Prompt Engineering (Chino Simplificado)',
+    institution: 'AWS Training & Certification',
+    duration: '2025',
+    status: 'Completado',
+    certificateUrl: 'pdf/prompt-aws-chino.pdf',
+    relevant: [
+      'Prompt Engineering',
+      'Modelos Generativos',
+      'Lengua China'
+    ]
+  },
+  {
+    id: '8',
+    degree: 'Curso: Edición de Fotos con Adobe Photoshop',
+    institution: 'Udemy',
+    duration: '2024',
+    status: 'Completado',
+    certificateUrl: 'pdf/photoshop.pdf',
+    relevant: [
+      'Edición de Imágenes',
+      'Photoshop',
+      'Diseño Visual'
+    ]
+  },
+  {
+    id: '9',
+    degree: 'Curso: HTML5 y CSS3 desde Cero',
+    institution: 'Udemy',
+    duration: '2025',
+    status: 'Completado',
+    certificateUrl: 'pdf/html-css.pdf',
+    relevant: [
+      'Diseño Web',
+      'Desarrollo Frontend',
+      'HTML y CSS'
+    ]
+  },
+  {
+    id: '10',
+    degree: 'Master Class: Técnicas de Visualización de Datos en Power BI',
+    institution: 'IDAT',
+    duration: '2025',
+    status: 'Asistencia Registrada',
+    certificateUrl: 'pdf/powerbi.pdf',
+    relevant: [
+      'Visualización de Datos',
+      'Power BI',
+      'Análisis de Datos'
+    ]
+  },
+  {
+    id: '11',
+    degree: 'Asistencia: International Talks - Transporte Internacional 5.0',
+    institution: 'Universidad Norbert Wiener',
+    duration: '2024',
+    status: 'Asistencia Registrada',
+    certificateUrl: 'pdf/international-talks.pdf',
+    relevant: [
+      'Transporte Internacional',
+      'Innovación 5.0',
+      'Gestión Global'
+    ]
+  },
+  {
+    id: '12',
+    degree: 'Curso: Prompt Engineering en IA Generativa',
+    institution: 'LinkedIn Learning',
+    duration: '2025',
+    status: 'Completado',
+    certificateUrl: 'pdf/prompt-linkedin.pdf',
+    relevant: [
+      'Prompt Engineering',
+      'IA Generativa',
+      'Interacción con IA'
+    ]
+  },
+  {
+    id: '13',
+    degree: 'Curso: Excel Completo - Desde Principiante hasta Avanzado',
+    institution: 'Udemy',
+    duration: '2024',
+    status: 'Completado',
+    certificateUrl: 'pdf/excel.pdf',
+    relevant: [
+      'Microsoft Excel',
+      'Automatización con Hojas de Cálculo',
+      'Análisis de Datos'
+    ]
+  },
+  {
+    id: '14',
+    degree: 'Curso: Experto en Creación de Imágenes 3D: Arquitectura e Interior',
+    institution: 'Udemy',
+    duration: '2022',
+    status: 'Completado',
+    certificateUrl: 'pdf/3d-imagenes.pdf',
+    relevant: [
+      'Diseño 3D',
+      'Visualización Arquitectónica',
+      'Renderizado Interior'
+    ]
+  },
+  {
+    id: '15',
+    degree: 'Curso: Python Practicando - Desde 0 hasta Desarrollador',
+    institution: 'Udemy',
+    duration: '2024',
+    status: 'Completado',
+    certificateUrl: 'pdf/python-practicando.pdf',
+    relevant: [
+      'Desarrollo en Python',
+      'Automatización',
+      'Programación desde cero'
+    ]
+  },
+  {
+    id: '16',
+    degree: 'Curso: Desarrollo de Juegos con Unreal Engine 4 - De 0 a Profesional',
+    institution: 'Udemy',
+    duration: '2020',
+    status: 'Completado',
+    certificateUrl: 'pdf/unreal-engine.pdf',
+    relevant: [
+      'Desarrollo de Videojuegos',
+      'Unreal Engine 4',
+      'Diseño Interactivo'
+    ]
+  },
+  {
+    id: '17',
+    degree: 'Curso: SQL y Bases de Datos Relacionales',
+    institution: 'IDAT',
+    duration: '2024 - 2025',
+    status: 'Finalizado',
+    certificateUrl: 'pdf/sql-idat.pdf',
+    relevant: [
+      'Bases de Datos',
+      'SQL',
+      'Modelado Relacional'
+    ]
   }
 ];
 

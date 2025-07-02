@@ -111,9 +111,9 @@ const Experience: React.FC = () => {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
-            { number: '50+', label: 'Proyectos Completados' },
-            { number: '5+', label: 'Años de Experiencia' },
-            { number: '99%', label: 'Satisfacción del Cliente' },
+            { number: '5+', label: 'Proyectos Completados' },
+            { number: '5+', label: 'Años de Experiencia Laboral' },
+            { number: '100%', label: 'Productivo' },
             { number: '15+', label: 'Tecnologías Dominadas' }
           ].map((stat, index) => (
             <div key={index} className="text-center">

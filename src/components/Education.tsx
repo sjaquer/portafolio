@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { GraduationCap, Award, Calendar } from 'lucide-react';
@@ -9,6 +9,10 @@ const Education: React.FC = () => {
     threshold: 0.1,
     triggerOnce: true
   });
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleEducation = showAll ? education : education.slice(0, 6);
+
 
   return (
     <section id="education" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
@@ -37,7 +41,7 @@ const Education: React.FC = () => {
 
           {/* Items de educacion*/}
           <div className="space-y-12">
-            {education.map((edu, index) => (
+            {visibleEducation.map((edu, index) => (
               <motion.div
                 key={edu.id}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
@@ -126,6 +130,18 @@ const Education: React.FC = () => {
             ))}
           </div>
         </div>
+        
+{education.length > 6 && (
+          <div className="text-center mt-8">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-6 py-2 bg-gradient-to-r from-purple-600 to-red-600 text-white rounded-lg font-medium hover:from-purple-700 hover:to-red-700 transition-all duration-300"
+            >
+              {showAll ? 'Mostrar menos' : 'Mostrar línea de tiempo completa'}
+            </button>
+          </div>
+        )}
+
 
         {/* Certificacione Adicionales */}
         <motion.div
