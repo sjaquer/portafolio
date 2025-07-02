@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
             whileHover={{ scale: 1.05 }}
             className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
           >
-            JS
+            SJ
           </motion.div>
 
           {/* Desktop Navigation */}
