@@ -1,4 +1,4 @@
-import { Experience, Education, Project, Skill } from '../types';
+import { Experience, Education, Project, Skill, GalleryItem } from '../types';
 
 export const experiences: Experience[] = [
 {
@@ -215,5 +215,37 @@ export const skills: Skill[] = [
   { name: 'AWS', category: 'DevOps', proficiency: 85, icon: 'Cloud' },
   { name: 'Docker', category: 'DevOps', proficiency: 80, icon: 'Package' },
   { name: 'Git', category: 'DevOps', proficiency: 95, icon: 'GitBranch' },
-  { name: 'MongoDB', category: 'Base de Datos', proficiency: 85, icon: 'Database' }
+  { name: 'MongoDB', category: 'Base de Datos', proficiency: 85, icon: 'Database' },
+
+  // Administrative
+  { name: 'Excel Avanzado', category: 'Administrativas', proficiency: 90, icon: 'FileText' },
+  { name: 'Gestión Documental', category: 'Administrativas', proficiency: 80, icon: 'ClipboardList' },
+  { name: 'Planificación', category: 'Administrativas', proficiency: 75, icon: 'CalendarCheck' }
+];
+
+export const gallery: GalleryItem[] = [
+  {
+    id: '1',
+    type: 'image',
+    src: 'https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=600',
+    alt: 'Proyecto de diseño 3D'
+  },
+  {
+    id: '2',
+    type: 'image',
+    src: 'https://images.pexels.com/photos/977241/pexels-photo-977241.jpeg?auto=compress&cs=tinysrgb&w=600',
+    alt: 'Fotografía de producto'
+  },
+  {
+    id: '3',
+    type: 'video',
+    src: 'https://videos.pexels.com/video-files/856205/856205-hd_1280_720_25fps.mp4',
+    alt: 'Video promocional'
+  },
+  {
+    id: '4',
+    type: 'video',
+    src: 'https://videos.pexels.com/video-files/854109/854109-hd_1280_720_30fps.mp4',
+    alt: 'Animación 3D'
+  }
 ];
