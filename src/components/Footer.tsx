@@ -40,11 +40,11 @@ const Footer: React.FC = () => {
               className="mb-6"
             >
               <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-3">
-                John Smith
+                Sebastian Jaque
               </h3>
               <p className="text-gray-400 max-w-md">
-                Desarrollador Full Stack y Profesional Creativo que crea experiencias digitales excepcionales
-                mediante desarrollo web innovador y un diseño visual impresionante.
+                Mejora empresarial mediante programación, soluciones creativas y tecnología, 
+                optimizando procesos y la experiencia de clientes y empresas.
               </p>
             </motion.div>
 
