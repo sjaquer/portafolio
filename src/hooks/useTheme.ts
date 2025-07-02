@@ -27,11 +27,14 @@ export const useTheme = () => {
   }, []);
 
   useEffect(() => {
+    const root = document.documentElement;
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
     if (isDark) {
-      document.documentElement.classList.add('dark');
+      root.classList.add('dark');
+      root.classList.remove('light');
     } else {
-      document.documentElement.classList.remove('dark');
+      root.classList.add('light');
+      root.classList.remove('dark');
     }
   }, [isDark]);
 

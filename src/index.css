@@ -15,12 +15,17 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #0a0a0a;
-  color: #ffffff;
+  background: #f7f8fc;
+  color: #1e293b;
   margin: 0;
   padding: 0;
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+.dark body {
+  background: #0a0a0a;
+  color: #ffffff;
 }
 
 /* Prevent horizontal scroll from transformed elements */
@@ -34,6 +39,10 @@ section {
 }
 
 ::-webkit-scrollbar-track {
+  background: #e5e7eb;
+}
+
+.dark ::-webkit-scrollbar-track {
   background: #1a1a1a;
 }
 
@@ -55,12 +64,20 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: -2;
-  background: 
+  background:
+    radial-gradient(circle at 20% 50%, rgba(100, 116, 139, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(249, 115, 22, 0.2) 0%, transparent 50%),
+    linear-gradient(135deg, #e8edff 0%, #f7f8fc 100%);
+  animation: backgroundShift 20s ease-in-out infinite;
+}
+
+.dark body::before {
+  background:
     radial-gradient(circle at 20% 50%, rgba(26, 27, 46, 0.5) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(74, 27, 127, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 40% 80%, rgba(163, 21, 69, 0.2) 0%, transparent 50%),
     linear-gradient(135deg, #0a0a0a 0%, #1a1b2e 100%);
-  animation: backgroundShift 20s ease-in-out infinite;
 }
 
 @keyframes backgroundShift {
@@ -116,6 +133,10 @@ textarea:focus-visible {
 /* Dark theme styles */
 .dark {
   color-scheme: dark;
+}
+
+.light {
+  color-scheme: light;
 }
 
 /* Smooth transitions */
