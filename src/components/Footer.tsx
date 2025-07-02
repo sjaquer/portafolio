@@ -55,18 +55,18 @@ const Footer: React.FC = () => {
               className="flex items-center gap-4 mb-6"
             >
               <a
-                href="mailto:john@example.com"
+                href="mailto:sjaquer@outlook.es"
                 className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
               >
                 <Mail size={16} />
-                <span className="text-sm">john@example.com</span>
+                <span className="text-sm">sjaquer@outlook.es</span>
               </a>
               <a
                 href="tel:+15551234567"
                 className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
               >
                 <Phone size={16} />
-                <span className="text-sm">+1 (555) 123-4567</span>
+                <span className="text-sm">+51 946-978-919</span>
               </a>
             </motion.div>
 
@@ -142,7 +142,7 @@ const Footer: React.FC = () => {
           className="mt-12 pt-8 border-t border-gray-800/50 flex flex-col sm:flex-row items-center justify-between gap-4"
         >
           <div className="flex items-center gap-2 text-gray-400 text-sm">
-            <span>© {currentYear} John Smith. Hecho con</span>
+            <span>© {currentYear} sjaquer. Hecho con</span>
             <Heart className="text-red-400" size={14} />
             <span>usando React y TypeScript</span>
           </div>
