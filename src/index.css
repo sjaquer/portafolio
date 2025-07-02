@@ -200,3 +200,38 @@ textarea:focus-visible {
     color: #000000;
   }
 }
+
+/* Skill card shine effect */
+.skill-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card .shine-effect {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(59, 130, 246, 0) 0%,
+    rgba(59, 130, 246, 0.3) 25%,
+    rgba(139, 92, 246, 0.3) 50%,
+    rgba(236, 72, 153, 0.3) 75%,
+    rgba(236, 72, 153, 0) 100%
+  );
+  background-size: 200% 100%;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.3s ease;
+}
+
+.skill-card:hover .shine-effect {
+  opacity: 1;
+  animation: shine 0.8s linear forwards;
+}
+
+@keyframes shine {
+  to {
+    transform: translateX(100%);
+  }
+}
