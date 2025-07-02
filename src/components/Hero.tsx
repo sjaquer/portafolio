@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Download, MessageCircle, Github, Linkedin, Instagram, Youtube, MapPin, Mail } from 'lucide-react';
+import profileImg from '../../images/iconperso.jpg';
 
 const Hero: React.FC = () => {
   const socialLinks = [
@@ -164,7 +165,7 @@ const Hero: React.FC = () => {
                 <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-red-500 p-1">
                   <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
                     <img
-                      src="/images/iconperso.jpg"
+                      src={profileImg}
                       alt="Sebastián Jaque"
                       className="w-full h-full object-cover"
                     />
