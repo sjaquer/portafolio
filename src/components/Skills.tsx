@@ -61,55 +61,30 @@ const Skills: React.FC = () => {
                 </div>
 
                 {/* Skills Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                   {categorySkills.map((skill, skillIndex) => {
                     const IconComponent = getIconComponent(skill.icon);
-                    
+
                     return (
                       <motion.div
                         key={skill.name}
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={inView ? { opacity: 1, scale: 1 } : {}}
-                        transition={{ 
-                          duration: 0.4, 
-                          delay: categoryIndex * 0.1 + skillIndex * 0.05 
+                        transition={{
+                          duration: 0.4,
+                          delay: categoryIndex * 0.1 + skillIndex * 0.05
                         }}
-                        className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 rounded-xl p-6 backdrop-blur-sm hover:border-blue-500/30 transition-all duration-300"
+                        className="group relative flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700/50 rounded-xl p-6 h-32 backdrop-blur-sm hover:border-blue-500/30 transition-all duration-300"
                       >
-                        {/* Skill Icon */}
-                        <div className="flex items-center justify-between mb-4">
-                          <div className="p-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg">
-                            <IconComponent className="text-blue-400 group-hover:text-white transition-colors" size={24} />
-                          </div>
-                          <div className="text-right">
-                            <div className="text-lg font-bold text-white">{skill.proficiency}%</div>
-                            <div className="text-xs text-gray-400">Dominio</div>
-                          </div>
+                        <div className="p-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg">
+                          <IconComponent className="text-blue-400 group-hover:text-white transition-colors" size={28} />
                         </div>
 
-                        {/* Skill Name */}
-                        <h4 className="text-white font-semibold mb-3 group-hover:text-blue-400 transition-colors">
+                        <h4 className="text-white font-semibold text-sm text-center group-hover:text-blue-400 transition-colors">
                           {skill.name}
                         </h4>
 
-                        {/* Proficiency Bar */}
-                        <div className="relative">
-                          <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
-                            <motion.div
-                              initial={{ width: 0 }}
-                              animate={inView ? { width: `${skill.proficiency}%` } : {}}
-                              transition={{ 
-                                duration: 1.5, 
-                                delay: categoryIndex * 0.1 + skillIndex * 0.05 + 0.5,
-                                ease: "easeOut"
-                              }}
-                              className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
-                            />
-                          </div>
-                        </div>
-
-                        {/* Hover Effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </motion.div>
                     );
                   })}
