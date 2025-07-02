@@ -1,13 +1,30 @@
 import { useState, useEffect } from 'react';
 
 export const useTheme = () => {
-  const [isDark, setIsDark] = useState(() => {
+  const getPreferredTheme = () => {
     if (typeof window !== 'undefined') {
       const stored = localStorage.getItem('theme');
-      return stored ? stored === 'dark' : true; // Default to dark theme
+      if (stored) {
+        return stored === 'dark';
+      }
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
     return true;
-  });
+  };
+
+  const [isDark, setIsDark] = useState(getPreferredTheme);
+
+  useEffect(() => {
+    const matcher = window.matchMedia('(prefers-color-scheme: dark)');
+    const systemChange = (e: MediaQueryListEvent) => {
+      const stored = localStorage.getItem('theme');
+      if (!stored) {
+        setIsDark(e.matches);
+      }
+    };
+    matcher.addEventListener('change', systemChange);
+    return () => matcher.removeEventListener('change', systemChange);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
